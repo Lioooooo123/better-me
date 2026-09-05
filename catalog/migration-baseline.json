@@ -1,0 +1,299 @@
+{
+  "date": "2026-09-05",
+  "skills": [
+    {
+      "name": "check",
+      "original_path": ".agents/skills/check",
+      "kept": true,
+      "entry_sha256": "f1f6a1b91065d5dbed63aefb2ff4bcb77e12276799680c55c2f480733a631aca",
+      "tree_sha256": "39ca6be4336fa6edb90e2ab3deca323f204144bbb3d896bf2f9183e50bfbf9c6"
+    },
+    {
+      "name": "codebase-design",
+      "original_path": ".agents/skills/codebase-design",
+      "kept": true,
+      "entry_sha256": "7e94fa66a86dbadb03002d715421499bb9e0cac7253486734468a3e596dcca81",
+      "tree_sha256": "99afc66213125ed5a5daba1d67c201f69db0ae7658c79669f5f28a4c3fedbc16"
+    },
+    {
+      "name": "domain-modeling",
+      "original_path": ".agents/skills/domain-modeling",
+      "kept": true,
+      "entry_sha256": "6504e8d9033240590eb0ecd5e8834270059f89cd9ae8c735c47a3d9297390f50",
+      "tree_sha256": "2dfa2e8eaba5d86ffa22b4c4c4b3ac088c32c67c6fee5b619f3dd6e36297dad9"
+    },
+    {
+      "name": "handoff",
+      "original_path": ".agents/skills/handoff",
+      "kept": true,
+      "entry_sha256": "57c9f1f392d7352cdc85b1e39ca49eddc70ce1dc278bd9653fb4f23dfc2560fc",
+      "tree_sha256": "9811ef1d34d5d370923b24a430dc45ecd704083c43990ce3efd56cd1d2802282"
+    },
+    {
+      "name": "health",
+      "original_path": ".agents/skills/health",
+      "kept": true,
+      "entry_sha256": "0dec8008092a2495cdbc6df554ef41055fcf7177b430b257a378be8ff2c5da2c",
+      "tree_sha256": "a4e57f6c1e58c3356749aab7cdd7f1f8f3bad18454eb23c79761d0ef9307d6a4"
+    },
+    {
+      "name": "html-resume-builder",
+      "original_path": ".agents/skills/html-resume-builder",
+      "kept": true,
+      "entry_sha256": "d4fe756a2c0a9ea323f366c0a5693ac0f243b743659c93d658bd72f4cb5d56c8",
+      "tree_sha256": "0b6ff7708c5e72c78f6fdb2bbb59d1bb67aa54b919102f6aa023c422b724567b"
+    },
+    {
+      "name": "hunt",
+      "original_path": ".agents/skills/hunt",
+      "kept": true,
+      "entry_sha256": "55bdadcd37e9cb52ae719065b70ee51171522b4e18caa7ac7f1c06ff8bd0ddb8",
+      "tree_sha256": "c88793549d03cd75678b74cda70dc62bbf67be029f135bc63496d1f3295dbe83"
+    },
+    {
+      "name": "lark-approval",
+      "original_path": ".agents/skills/lark-approval",
+      "kept": false,
+      "entry_sha256": "2ac464c970291bf38e9a5ce7e2fb013c13abaf03d736ad75f64dd93a635aa5f7",
+      "tree_sha256": "3e987522b0ccc8aa5d1cbb23e9ccecd5baf34ef4b0732ac254f35edcc9d1a27b"
+    },
+    {
+      "name": "lark-apps",
+      "original_path": ".agents/skills/lark-apps",
+      "kept": false,
+      "entry_sha256": "b6b92206aeb4ce14f7c1589f91883b8fd2f19539cc1069fc8ae13c02e665c9b8",
+      "tree_sha256": "99b374b49582a9b4be5af8c89af05845d2da771415d7554dd46a0fce6e300f65"
+    },
+    {
+      "name": "lark-attendance",
+      "original_path": ".agents/skills/lark-attendance",
+      "kept": false,
+      "entry_sha256": "a0ea5f3fa176496dda31d912f7e55ad7cfed5243b30567d16e7f9dc96eebbe8b",
+      "tree_sha256": "986315edc495883b03b1cd5d519480a3ad632ed8f1b724e0cf97729668fdf7ae"
+    },
+    {
+      "name": "lark-base",
+      "original_path": ".agents/skills/lark-base",
+      "kept": false,
+      "entry_sha256": "1a4a8c4b0985e23a884dadbbe66f7789f3c960551d3ff027eb4680917eaee331",
+      "tree_sha256": "797a25b85a6f2f7d6aab1de45b6f5437b100b23c93adc32d1a39417b88f4a86b"
+    },
+    {
+      "name": "lark-calendar",
+      "original_path": ".agents/skills/lark-calendar",
+      "kept": true,
+      "entry_sha256": "4a8816db9e10e6fce622e3899aa6a42853913da0386a4cd35afaa2488d96a504",
+      "tree_sha256": "a9dc58973446c1433d33a813d550e8aa6ae31569c1002369ccdd2d45aa050d3c"
+    },
+    {
+      "name": "lark-contact",
+      "original_path": ".agents/skills/lark-contact",
+      "kept": false,
+      "entry_sha256": "9901f3c57436dfc0936f3225f11982063e9b7c4a5f1009c3fcbebfa7870f9731",
+      "tree_sha256": "f7fe77b04c3f6e25f8fe541296d085fd7b67dc5e4a469f987dedd77066a2be96"
+    },
+    {
+      "name": "lark-doc",
+      "original_path": ".agents/skills/lark-doc",
+      "kept": true,
+      "entry_sha256": "fb0b03776f42a57d0d56ca3498644e92b06e7e96a6f3ed07b6b98895213f4f58",
+      "tree_sha256": "8eb931d1708254335ab28d23373d965420f884dd53c4c1894d2f80cba13b445a"
+    },
+    {
+      "name": "lark-drive",
+      "original_path": ".agents/skills/lark-drive",
+      "kept": true,
+      "entry_sha256": "6648aed4e4fee673353a139a3c89deb428f4a5abf0db56e35d950417db7b2889",
+      "tree_sha256": "d2d5c32344f27c315fd2501a9a9c62e2b58de09d190713bb6a6f9d981a4240d7"
+    },
+    {
+      "name": "lark-event",
+      "original_path": ".agents/skills/lark-event",
+      "kept": false,
+      "entry_sha256": "467527c6a6237c707a23d1680267fcde7ca574b586813bac4ce8268b934ce20c",
+      "tree_sha256": "a541ba47040291ac87799b0a9522e238f66b7339b845d5db39a8c08828a510cb"
+    },
+    {
+      "name": "lark-im",
+      "original_path": ".agents/skills/lark-im",
+      "kept": true,
+      "entry_sha256": "81e398e1e9807a7dc8dc3138844fa2a7dc8e3463277e714be248e300d0c48a65",
+      "tree_sha256": "446d5193cc8a0c610bbe02660a34ff258f990e28bfef73a87404824b57784f0f"
+    },
+    {
+      "name": "lark-mail",
+      "original_path": ".agents/skills/lark-mail",
+      "kept": false,
+      "entry_sha256": "deb5b104d2eaf01053717ea2ae1b76add51b088dfc1f53dcc62decfdd25cc2ad",
+      "tree_sha256": "6e9361e14642c45d889e7b34b0892d6c89a667f52a0a367ce46df4a673b2923e"
+    },
+    {
+      "name": "lark-markdown",
+      "original_path": ".agents/skills/lark-markdown",
+      "kept": false,
+      "entry_sha256": "dd533844109c1b46e23c84171da7ea2ad2faa9f75999c27d7c7cc1fe8ec32709",
+      "tree_sha256": "c6a9a13464aa85212315be9ef5bc3342c6c43a9752e3787c353851f42d378dd5"
+    },
+    {
+      "name": "lark-meeting",
+      "original_path": ".agents/skills/lark-meeting",
+      "kept": false,
+      "entry_sha256": "1160eab8ce685dbbb2c9c7b229ffce6ff2342cb8a3e1d5aabe948d988a8c062b",
+      "tree_sha256": "9059ae5d13bcb6a89cc2181743afc1440f355fff7bcd64718f1cb57e19439138"
+    },
+    {
+      "name": "lark-okr",
+      "original_path": ".agents/skills/lark-okr",
+      "kept": false,
+      "entry_sha256": "658ec51f59e3af529064821fb5fbee2ed3ff5cac9e22b66887541cfab4353772",
+      "tree_sha256": "355bf8d80040b65c8ae7a8bc117cb1c7fcd584a4c84da4bdb64b0c295b56ab18"
+    },
+    {
+      "name": "lark-openapi-explorer",
+      "original_path": ".agents/skills/lark-openapi-explorer",
+      "kept": false,
+      "entry_sha256": "ae89debc3f807f9947831b4525e1c118bc14544877c14c14aaa47298b1e863b4",
+      "tree_sha256": "88229b6ad390de2b2a500c2614ff0404c47752225569741be348fc37461553e2"
+    },
+    {
+      "name": "lark-shared",
+      "original_path": ".agents/skills/lark-shared",
+      "kept": true,
+      "entry_sha256": "9fa68bb1f3ce564602c6df6c303ea4d2759de02442772f332fe5041d65720a1f",
+      "tree_sha256": "77c468ff9951b0f3b30f7500d1495cf44d45c5300e986a95191b5e39b1598372"
+    },
+    {
+      "name": "lark-sheets",
+      "original_path": ".agents/skills/lark-sheets",
+      "kept": false,
+      "entry_sha256": "dba9b1a4255e79cb360358fd78ff1a1c035f3b811e758323d4501627af917635",
+      "tree_sha256": "fa57a9ebca03d239a19125b9b74c37d5ac3dc501a5209c61970ca1899806c623"
+    },
+    {
+      "name": "lark-skill-maker",
+      "original_path": ".agents/skills/lark-skill-maker",
+      "kept": false,
+      "entry_sha256": "8591158289a3cb003c7ac18001ce6b42837c780d2567492cea87bf98982b3678",
+      "tree_sha256": "d3f528d39205790987e0628464f035020ca05fc2d6efb3dae67d11abedb9d3b3"
+    },
+    {
+      "name": "lark-slides",
+      "original_path": ".agents/skills/lark-slides",
+      "kept": false,
+      "entry_sha256": "f14acacb4e51304eefc386e31bd72be4f55ccde2447ce816eb889130dd3ff437",
+      "tree_sha256": "f9b1d25c1b12e5606b57ae449bd74c9dcb6e00e6838da3f27504c2e2941cd06a"
+    },
+    {
+      "name": "lark-task",
+      "original_path": ".agents/skills/lark-task",
+      "kept": true,
+      "entry_sha256": "f69e7f68432723240710a90ad390d97f777f5511868743d00a8478180a6a0d7a",
+      "tree_sha256": "ac4b592bb8901d0bba8d38135db0a0531eacf18940a27c09b0beeff136388648"
+    },
+    {
+      "name": "lark-whiteboard",
+      "original_path": ".agents/skills/lark-whiteboard",
+      "kept": false,
+      "entry_sha256": "78a3fbffa0da5c561b3e7035543fe1e80dbd7854c38d84e35e1392598b288f07",
+      "tree_sha256": "2a23563dcdd6bfacc631b69dcb40b1b4b9c5d10d81f40cdee121ae8ff7bec7cc"
+    },
+    {
+      "name": "lark-wiki",
+      "original_path": ".agents/skills/lark-wiki",
+      "kept": true,
+      "entry_sha256": "dc29f8ffb48f1e38722bcd204c4712c502f375ef863622d662d1230667cb64a4",
+      "tree_sha256": "1a416161cfec3737b50fb20fef5576e7f545e47c285e53bed0ba653604808d7b"
+    },
+    {
+      "name": "lark-workflow-meeting-summary",
+      "original_path": ".agents/skills/lark-workflow-meeting-summary",
+      "kept": false,
+      "entry_sha256": "2cc95a5db67b9cb73bc4d3f3d38f49b348e56f99cadca5cd998ed8c443f6e166",
+      "tree_sha256": "e4ccc76b9a6121a8246a512b2a60858e14729a47923cec604e623f86b6cc1626"
+    },
+    {
+      "name": "lark-workflow-standup-report",
+      "original_path": ".agents/skills/lark-workflow-standup-report",
+      "kept": false,
+      "entry_sha256": "a283de746e65f97d7d25c3b9e351c2e5c16702be81c0f004d5be718c50994690",
+      "tree_sha256": "2c1ea619e81c085f91a8ccff98a4ed7ec52eae56ef4eb49e431246b9af1199a0"
+    },
+    {
+      "name": "learn",
+      "original_path": ".agents/skills/learn",
+      "kept": true,
+      "entry_sha256": "35baf76522476612b85116980433de077fc20c67e073854a4d2ec08b3b009289",
+      "tree_sha256": "87df026913993ac4aea16ae1f68498ab6060a5add9e2a99c317027a5971d22d8"
+    },
+    {
+      "name": "obsidian-vault",
+      "original_path": ".agents/skills/obsidian-vault",
+      "kept": true,
+      "entry_sha256": "95f3d4f257a08e853ee696f79d05cb438cd30adffc55aef9f49cc8ebb1ab5f9a",
+      "tree_sha256": "9f599d76266388cbd1debdec8f9b00ae752d43b363596e13c072eaaa39c512d2"
+    },
+    {
+      "name": "read",
+      "original_path": ".agents/skills/read",
+      "kept": true,
+      "entry_sha256": "6558da2fbfc5e2cc2de3a38e53a3eefd0b3e38d5aa843098ff81fdd8268a7c3e",
+      "tree_sha256": "ae881a2ccbcb43a6b422a4960faa2572de4307fcb7ddfe37885bd14f363dd96a"
+    },
+    {
+      "name": "setup-pre-commit",
+      "original_path": ".agents/skills/setup-pre-commit",
+      "kept": true,
+      "entry_sha256": "de3985d3ad59b1027f8e21182b67371ab6eaa97d2edbcab9e3ae1ec614e94492",
+      "tree_sha256": "a27cf906c21870f92e6e723b31353228c839defbdc68440d930529ec47ea36e8"
+    },
+    {
+      "name": "tdd",
+      "original_path": ".agents/skills/tdd",
+      "kept": true,
+      "entry_sha256": "924a769c396d80dafec83649a26119dc31606e2cf701bf9203a23e231675af22",
+      "tree_sha256": "a4c2b6f01cce5569853a5a24ec986841ff8decd197fd2f6d8ab7a6c204fc93cc"
+    },
+    {
+      "name": "think",
+      "original_path": ".agents/skills/think",
+      "kept": true,
+      "entry_sha256": "89d7b34d71e65f92f35b5fd42a3a4b0e4d1ffce6bb8d7a6d232534c73e4adec7",
+      "tree_sha256": "4b04de8fdfb295c6e3e5d99dc6a92a81620dc399f08315eb8a5c684b3e161892"
+    },
+    {
+      "name": "to-tickets",
+      "original_path": ".agents/skills/to-tickets",
+      "kept": true,
+      "entry_sha256": "e6dd12a842ec6be8727fd32b84be8557c561b420be112b667b6f472f6f59629e",
+      "tree_sha256": "2b6b4eeac963308d790322ba4f1e60c5ddb12969169b83cb3db36e43ca8817bb"
+    },
+    {
+      "name": "ui",
+      "original_path": ".agents/skills/ui",
+      "kept": true,
+      "entry_sha256": "1da9fd55620b0eb87f6dbf0c9f894b03c19a6f5f02581cd2002f2245c87e7555",
+      "tree_sha256": "ca40a2a14f0f6e6d49f62f8d5bbec4bd611d9ee946550751322fe454ec56ad4a"
+    },
+    {
+      "name": "write",
+      "original_path": ".agents/skills/write",
+      "kept": true,
+      "entry_sha256": "b30ee3f8b48f11eb44522afd7d854fd302de24aaf7577ee503934c9cc4c5cce9",
+      "tree_sha256": "540b5dee4574eb61cc608df782f50505ee352efa8ed89a43643b0eed5b3385b6"
+    },
+    {
+      "name": "asu-skills",
+      "original_path": ".codex/skills/asu-skills",
+      "kept": true,
+      "entry_sha256": "043c5d737a74fa8cfa0b5d05c5961cf6f41ca46b42b111d625ed861c4be8c8be",
+      "tree_sha256": "1c4fff945ddfdd17c72209fb4078013044aaedab5ef4ff284a7bfefac2914cb2"
+    },
+    {
+      "name": "ios-hig-design",
+      "original_path": ".codex/skills/ios-hig-design",
+      "kept": true,
+      "entry_sha256": "d9408736e619d6ba013eb37554e5f260a9475913da18a1cf573ca1b11593ad23",
+      "tree_sha256": "0f992114422579ccc58a36033fb9b04a56e5476dab487d6131291b3ecec444f5"
+    }
+  ]
+}

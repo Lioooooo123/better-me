@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "name": "asu-skills",
+      "requires": [],
+      "companions": [
+        "html-resume-builder",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "local",
+        "original_folder_hash": null,
+        "modified": true
+      }
+    },
+    {
+      "name": "check",
+      "requires": [],
+      "companions": [
+        "codebase-design",
+        "hunt"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "64382d926f2f47de2b491f1bd93580d191e83b3c",
+        "modified": true
+      }
+    },
+    {
+      "name": "codebase-design",
+      "requires": [],
+      "companions": [
+        "check",
+        "domain-modeling",
+        "tdd"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "20b7cd1dd1fe5b0bd37ba72649f3a29375574b5b",
+        "modified": true
+      }
+    },
+    {
+      "name": "domain-modeling",
+      "requires": [],
+      "companions": [
+        "codebase-design",
+        "think"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "959e63161ff78b4b1cd553b2c0e09e0c68418e5f",
+        "modified": true
+      }
+    },
+    {
+      "name": "handoff",
+      "requires": [],
+      "companions": [],
+      "explicit_only": true,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "184d485ae68a2132893a94239b2b85d253e6152b",
+        "modified": true
+      }
+    },
+    {
+      "name": "health",
+      "requires": [],
+      "companions": [
+        "check",
+        "hunt"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "023e26f0f7bb8ff12ddfcab1f3c574a54bf6421f",
+        "modified": true
+      }
+    },
+    {
+      "name": "html-resume-builder",
+      "requires": [],
+      "companions": [
+        "asu-skills",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "KevinYoung-Kw/vibe-resume-skill",
+        "original_folder_hash": "f03335da4d7f6896160c61da00a94476952663c1",
+        "modified": true
+      }
+    },
+    {
+      "name": "hunt",
+      "requires": [],
+      "companions": [
+        "check",
+        "codebase-design",
+        "tdd"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "40f3a6394e3cf2ff738cf4abe8bf5ea6ea6b8fa0",
+        "modified": true
+      }
+    },
+    {
+      "name": "ios-hig-design",
+      "requires": [],
+      "companions": [
+        "ui"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "local; original author wondelai",
+        "original_folder_hash": null,
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-calendar",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-shared",
+        "lark-task"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-doc",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-drive",
+        "lark-shared",
+        "lark-wiki",
+        "learn",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-drive",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-doc",
+        "lark-shared",
+        "lark-wiki"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-im",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-doc",
+        "lark-shared",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-shared",
+      "requires": [],
+      "companions": [],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-task",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-calendar",
+        "lark-shared",
+        "to-tickets"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "lark-wiki",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-doc",
+        "lark-drive",
+        "lark-shared"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true
+      }
+    },
+    {
+      "name": "learn",
+      "requires": [],
+      "companions": [
+        "obsidian-vault",
+        "read",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "1aade816ebcb8917ed1a258e6b766731f829c0dc",
+        "modified": true
+      }
+    },
+    {
+      "name": "obsidian-vault",
+      "requires": [],
+      "companions": [
+        "learn",
+        "read"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "5fdd257588fefa400e8a0d505aac555a0b52311a",
+        "modified": true
+      }
+    },
+    {
+      "name": "read",
+      "requires": [],
+      "companions": [
+        "lark-doc",
+        "learn",
+        "obsidian-vault",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "20c840bd1ea5abb1fbf536205f00b6133a347c74",
+        "modified": true
+      }
+    },
+    {
+      "name": "setup-pre-commit",
+      "requires": [],
+      "companions": [
+        "check",
+        "hunt"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "dcc584ff84c4f040ea12742fcb46b7c3ad7070bd",
+        "modified": true
+      }
+    },
+    {
+      "name": "skill-hub",
+      "requires": [],
+      "companions": [
+        "asu-skills",
+        "check",
+        "codebase-design",
+        "handoff",
+        "health",
+        "html-resume-builder",
+        "hunt",
+        "ios-hig-design",
+        "lark-doc",
+        "lark-drive",
+        "lark-wiki",
+        "learn",
+        "obsidian-vault",
+        "read",
+        "tdd",
+        "think",
+        "to-tickets",
+        "ui",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "local",
+        "original_folder_hash": null,
+        "modified": true
+      }
+    },
+    {
+      "name": "tdd",
+      "requires": [],
+      "companions": [
+        "check",
+        "codebase-design",
+        "hunt"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "423f3cc2bccf3b0ed426fb35eeb4b38d9188a343",
+        "modified": true
+      }
+    },
+    {
+      "name": "think",
+      "requires": [],
+      "companions": [
+        "codebase-design",
+        "domain-modeling",
+        "learn",
+        "read",
+        "to-tickets"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "a64d35b5883fc8847fb156131cbec88ac6e6d94a",
+        "modified": true
+      }
+    },
+    {
+      "name": "to-tickets",
+      "requires": [],
+      "companions": [
+        "lark-task",
+        "think"
+      ],
+      "explicit_only": true,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": "80c1bedbdaa72a4abd524055013accb4fe0ea8c4",
+        "modified": true
+      }
+    },
+    {
+      "name": "ui",
+      "requires": [],
+      "companions": [
+        "ios-hig-design"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "41b9ee63d946971efef17af703f6c4d1ef99d620",
+        "modified": true
+      }
+    },
+    {
+      "name": "write",
+      "requires": [],
+      "companions": [
+        "asu-skills",
+        "html-resume-builder",
+        "lark-doc",
+        "lark-im",
+        "learn",
+        "read"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "tw93/Waza",
+        "original_folder_hash": "b70897ecfc44dd52139d0d03b83112fdcbe33aa9",
+        "modified": true
+      }
+    }
+  ]
+}

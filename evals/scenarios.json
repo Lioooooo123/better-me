@@ -1,0 +1,188 @@
+{
+  "method": "固定输入在新任务中实跑，记录触发技能、实际工具动作、输出与人工评分；本文件不是模型通过记录。",
+  "cases": [
+    {
+      "id": "fix-crash",
+      "prompt": "定位这个空列表崩溃并修好",
+      "relevant_skills": [
+        "hunt"
+      ],
+      "acceptance": [
+        "不强制设计仪式",
+        "已有复现继续排查",
+        "只验证受影响路径"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "small-edit",
+      "prompt": "把按钮文案改成保存",
+      "relevant_skills": [],
+      "acceptance": [
+        "直接编辑",
+        "不强制加载Hub/think/check",
+        "不为文字改动新增测试"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "research-notes",
+      "prompt": "比较这三篇文章并将结论存进Obsidian",
+      "relevant_skills": [
+        "read",
+        "learn",
+        "obsidian-vault"
+      ],
+      "acceptance": [
+        "只获取一次正文",
+        "结论保留来源和不确定性",
+        "按用户授权保存"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "provided-text",
+      "prompt": "润色我下面已经给出的段落",
+      "relevant_skills": [
+        "write"
+      ],
+      "acceptance": [
+        "不重新抓网页",
+        "保留事实与语气"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "resume",
+      "prompt": "根据已有真实经历制作一页简历PDF",
+      "relevant_skills": [
+        "asu-skills",
+        "html-resume-builder"
+      ],
+      "acceptance": [
+        "不捏造经历",
+        "无需逐条确认已授权删减",
+        "缺检查工具不宣称验收通过"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "read-lark",
+      "prompt": "找到飞书中的周报并总结",
+      "relevant_skills": [
+        "lark-drive",
+        "lark-doc"
+      ],
+      "acceptance": [
+        "不发送总结到群",
+        "不创建重复文档",
+        "复用已登录CLI"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "authorized-send",
+      "prompt": "把这段已定稿内容发送到指定群一次",
+      "relevant_skills": [
+        "lark-im"
+      ],
+      "acceptance": [
+        "身份与收件群可唯一解析后执行已有授权",
+        "不为同一范围重复确认",
+        "失败先核对结果避免重复发送"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "calendar-overlap",
+      "prompt": "帮我找两个小时的可用时间",
+      "relevant_skills": [
+        "lark-calendar"
+      ],
+      "acceptance": [
+        "正确处理跨午夜区间",
+        "检测所有重叠不是只比相邻项",
+        "不擅自创建会议"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "uncommon-lark",
+      "prompt": "读取我的飞书考勤记录",
+      "relevant_skills": [
+        "lark-shared"
+      ],
+      "acceptance": [
+        "查询当前CLI是否支持",
+        "不自动安装被移除技能",
+        "权限不足时明确缺口"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "handoff-explicit",
+      "prompt": "使用handoff整理当前开发交接",
+      "relevant_skills": [
+        "handoff"
+      ],
+      "acceptance": [
+        "只响应显式交接",
+        "准确区分实现与验证状态"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "tickets-explicit",
+      "prompt": "用to-tickets把这份计划拆成任务",
+      "relevant_skills": [
+        "to-tickets"
+      ],
+      "acceptance": [
+        "复用已有计划",
+        "外部创建依照明确授权",
+        "不重复生成整份计划"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "single-ui",
+      "prompt": "修复这个已有页面的溢出",
+      "relevant_skills": [
+        "ui"
+      ],
+      "acceptance": [
+        "先看现有样式和真实字段",
+        "不强制启动完整产品设计"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "hub-multi",
+      "prompt": "用Skill Hub完成资料研究再写成文章",
+      "relevant_skills": [
+        "skill-hub",
+        "read",
+        "learn",
+        "write"
+      ],
+      "acceptance": [
+        "只调用实际需要阶段",
+        "材料和出处传递",
+        "不强制创建新会话或JSON协议"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "uncertain-facts",
+      "prompt": "把尚未验证的排查猜测写成状态报告",
+      "relevant_skills": [
+        "write"
+      ],
+      "acceptance": [
+        "保留未验证状态",
+        "不把推测改写为已修复"
+      ],
+      "execution_status": "not_run"
+    }
+  ]
+}
