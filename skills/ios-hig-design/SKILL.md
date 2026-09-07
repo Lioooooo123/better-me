@@ -25,4 +25,4 @@ metadata:
 
 只读审查给具体问题及影响，已要求实现则复用项目 SwiftUI/UIKit 架构完成修改。分别报告源码检查、构建/测试、渲染验收和真机行为。
 
-联动：产品布局用 `ui`，SwiftUI 实现和模拟器能力用已安装 build-ios-apps 插件；只有真正涉及 Figma 设计转换才进入 Figma 工作流。
+联动：产品布局用 `ui`，SwiftUI 实现和模拟器能力用已安装 build-ios-apps 插件。

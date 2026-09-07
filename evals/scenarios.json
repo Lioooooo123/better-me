@@ -56,7 +56,6 @@
       "id": "resume",
       "prompt": "根据已有真实经历制作一页简历PDF",
       "relevant_skills": [
-        "asu-skills",
         "html-resume-builder"
       ],
       "acceptance": [
@@ -153,22 +152,6 @@
       "acceptance": [
         "先看现有样式和真实字段",
         "不强制启动完整产品设计"
-      ],
-      "execution_status": "not_run"
-    },
-    {
-      "id": "hub-multi",
-      "prompt": "用Skill Hub完成资料研究再写成文章",
-      "relevant_skills": [
-        "skill-hub",
-        "read",
-        "learn",
-        "write"
-      ],
-      "acceptance": [
-        "只调用实际需要阶段",
-        "材料和出处传递",
-        "不强制创建新会话或JSON协议"
       ],
       "execution_status": "not_run"
     },

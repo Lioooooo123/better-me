@@ -1,6 +1,6 @@
 ---
 name: html-resume-builder
-description: 用 HTML 模板制作或修改简历，导出并检查一页 PDF。用于简历排版和文件交付；经历定位用 asu-skills，普通文字润色用 write。
+description: 用 HTML 模板制作或修改简历，导出并检查一页 PDF。用于简历排版和文件交付；普通文字润色用 write。
 ---
 
 # HTML / PDF 简历
@@ -19,4 +19,4 @@ description: 用 HTML 模板制作或修改简历，导出并检查一页 PDF。
 
 模板的颜色、留白和头像布局是默认样式，可按用户要求调整，不作为所有简历的统一硬规则。模板细则见 [模板与验收](references/template-contract.md)。
 
-联动：事实与岗位匹配用 `asu-skills`，文字用 `write`。传入的事实和删减授权保留；仅排版不自动重写职业定位。
+联动：文字润色用 `write`。传入的事实和删减授权保留；仅排版不自动重写职业定位。

@@ -36,11 +36,6 @@
   ],
   "skills": [
     {
-      "name": "asu-skills",
-      "status": "local",
-      "reason": "No registered upstream; maintained locally."
-    },
-    {
       "name": "check",
       "status": "reviewed",
       "repository": "tw93/Waza",
@@ -181,19 +176,6 @@
       "path": "skills/read",
       "tree_oid": "13d86e01f828487bfb548979ef1ebebcd4c197f8",
       "entry_sha256": "080faca57dcb145405e01918142e301cc04248cd1bfbd4fe44a9e827255d8a13"
-    },
-    {
-      "name": "setup-pre-commit",
-      "status": "reviewed",
-      "repository": "mattpocock/skills",
-      "path": "skills/misc/setup-pre-commit",
-      "tree_oid": "5b63f9f665bacc9be04cae51982e9ef1469d6699",
-      "entry_sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98"
-    },
-    {
-      "name": "skill-hub",
-      "status": "local",
-      "reason": "No registered upstream; maintained locally."
     },
     {
       "name": "tdd",

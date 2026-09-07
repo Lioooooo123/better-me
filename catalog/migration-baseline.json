@@ -242,7 +242,7 @@
     {
       "name": "setup-pre-commit",
       "original_path": ".agents/skills/setup-pre-commit",
-      "kept": true,
+      "kept": false,
       "entry_sha256": "de3985d3ad59b1027f8e21182b67371ab6eaa97d2edbcab9e3ae1ec614e94492",
       "tree_sha256": "a27cf906c21870f92e6e723b31353228c839defbdc68440d930529ec47ea36e8"
     },
@@ -284,7 +284,7 @@
     {
       "name": "asu-skills",
       "original_path": ".codex/skills/asu-skills",
-      "kept": true,
+      "kept": false,
       "entry_sha256": "043c5d737a74fa8cfa0b5d05c5961cf6f41ca46b42b111d625ed861c4be8c8be",
       "tree_sha256": "1c4fff945ddfdd17c72209fb4078013044aaedab5ef4ff284a7bfefac2914cb2"
     },

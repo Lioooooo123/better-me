@@ -2,20 +2,6 @@
   "version": 1,
   "skills": [
     {
-      "name": "asu-skills",
-      "requires": [],
-      "companions": [
-        "html-resume-builder",
-        "write"
-      ],
-      "explicit_only": false,
-      "provenance": {
-        "source": "local",
-        "original_folder_hash": null,
-        "modified": true
-      }
-    },
-    {
       "name": "check",
       "requires": [],
       "companions": [
@@ -112,7 +98,6 @@
       "name": "html-resume-builder",
       "requires": [],
       "companions": [
-        "asu-skills",
         "write"
       ],
       "explicit_only": false,
@@ -370,56 +355,6 @@
       }
     },
     {
-      "name": "setup-pre-commit",
-      "requires": [],
-      "companions": [
-        "check",
-        "hunt"
-      ],
-      "explicit_only": false,
-      "provenance": {
-        "source": "mattpocock/skills",
-        "original_folder_hash": "dcc584ff84c4f040ea12742fcb46b7c3ad7070bd",
-        "modified": true,
-        "upstream": {
-          "repository": "mattpocock/skills",
-          "path": "skills/misc/setup-pre-commit",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
-        }
-      }
-    },
-    {
-      "name": "skill-hub",
-      "requires": [],
-      "companions": [
-        "asu-skills",
-        "check",
-        "codebase-design",
-        "handoff",
-        "health",
-        "html-resume-builder",
-        "hunt",
-        "ios-hig-design",
-        "lark-doc",
-        "lark-drive",
-        "lark-wiki",
-        "learn",
-        "obsidian-vault",
-        "read",
-        "tdd",
-        "think",
-        "to-tickets",
-        "ui",
-        "write"
-      ],
-      "explicit_only": false,
-      "provenance": {
-        "source": "local",
-        "original_folder_hash": null,
-        "modified": true
-      }
-    },
-    {
       "name": "tdd",
       "requires": [],
       "companions": [
@@ -502,7 +437,6 @@
       "name": "write",
       "requires": [],
       "companions": [
-        "asu-skills",
         "html-resume-builder",
         "lark-doc",
         "lark-im",
