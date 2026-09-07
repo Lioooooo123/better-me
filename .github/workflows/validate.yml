@@ -1,4 +1,4 @@
-name: Validate Skill Hub
+name: Validate Praxis
 on: [push, pull_request]
 jobs:
   validate:
