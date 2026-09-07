@@ -7,7 +7,7 @@ description: 审计 Codex 技能、指令、加载配置、工具依赖和验证
 
 按用户指定对象检查 skills、指令、安装、工具或验证。先用当前文件和可重复的只读证据建立基线；历史对话与其他项目仅在用户要求或明确相关时读取。
 
-对 Skill Hub，在仓库运行 `python3 scripts/hub.py status` 检查链接与已安装集合，运行 `python3 scripts/validate.py` 检查源码结构与引用。执行位置应从安装链接或用户给出的仓库解析，不能假定当前目录就是 Hub。
+对 Skill Hub，在仓库运行 `python3 scripts/hub.py status` 检查链接与已安装集合，运行 `python3 scripts/validate.py` 检查源码结构与引用。用户要求核对上游时运行 `python3 scripts/check_upstream.py`；它只报告仓库分支是否变化，不能据此断言某个技能有更新，继续按 `catalog/upstream-state.json` 的目录与树指纹比较。执行位置应从安装链接或用户给出的仓库解析，不能假定当前目录就是 Hub。
 
 其他项目依次检查：实际生效的指令来源、相互冲突的条款、技能触发与依赖、已知失败对应的验证能力。文件大、工具多、没有某种模板都只是线索，不能单独判坏。
 

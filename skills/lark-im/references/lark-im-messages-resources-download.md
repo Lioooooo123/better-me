@@ -86,3 +86,9 @@ lark-cli im +messages-resources-download --message-id om_xxx --file-key img_v3_x
 
 - [lark-im](../SKILL.md) - all message-related commands
 - [lark-shared](../../lark-shared/SKILL.md) - authentication and global parameters
+
+## 版本与文件夹边界
+
+本机 `1.0.92` 的 `--output` help 仍要求相对路径且禁止 `..`。上游已允许特定根目录内的绝对路径，但当前版本不能套用该规则。
+
+只下载实际文件的 key，不能把 `is_folder` 项当作单文件。若消息渲染已返回目录内子文件，可用原 `--message-id` 加该子文件的 `--file-key` 显式下载；这不等于目录递归下载，详见 [文件夹结果](lark-im-messages-mget.md#文件夹结果与版本边界)。

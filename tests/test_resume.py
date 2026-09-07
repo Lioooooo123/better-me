@@ -15,6 +15,36 @@ spec.loader.exec_module(qa)
 
 
 class ResumeTests(unittest.TestCase):
+    def test_template_identity_checks_real_markup_and_allows_custom_layouts(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            html = Path(temporary) / 'resume.html'
+            for source, expected, passed in [
+                ('<html data-template="custom-layout"><main data-template="custom-layout"></main></html>', 'custom-layout', True),
+                ('<!-- data-template="basic-a4" --><html></html>', 'basic-a4', False),
+                ('<script>const text = \'data-template="basic-a4"\';</script>', 'basic-a4', False),
+                ('<html data-template="basic-a4"><main data-template="editorial"></main></html>', 'basic-a4', False),
+                ('<html data-template="editorial"></html>', 'basic-a4', False),
+            ]:
+                with self.subTest(source=source):
+                    html.write_text(source)
+                    checks = []
+                    qa.check_template_fingerprint(html, checks, expected)
+                    self.assertEqual(checks[0]['passed'], passed)
+                    self.assertEqual(qa.summarize_checks(checks, True)[1], 0 if passed else 1)
+            html.write_text('<html>Existing user resume</html>')
+            checks = []
+            qa.check_template_fingerprint(html, checks, None)
+            self.assertEqual(checks, [])
+
+    def test_bundled_template_identity_matches_manifest(self):
+        import json
+        for template in (ROOT / 'skills/html-resume-builder/assets/templates').iterdir():
+            with self.subTest(template=template.name):
+                expected = json.loads((template / 'template-manifest.json').read_text())['template_id']
+                checks = []
+                qa.check_template_fingerprint(template / 'resume.html', checks, expected)
+                self.assertTrue(checks[0]['passed'])
+
     def test_missing_poppler_is_incomplete_in_both_modes(self):
         with tempfile.TemporaryDirectory() as temporary:
             html = Path(temporary) / 'resume.html'

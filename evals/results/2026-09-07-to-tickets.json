@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-07",
+  "mode": "independent_planning_trial",
+  "skill": "to-tickets",
+  "prompt": "项目有 api、worker、web 三个包，共享 CustomerId 当前是 string，需要改成 { value: string }。直接改会让三个包同时编译失败。允许临时兼容两种形式；不能中断现有调用。帮我拆成可执行任务，先给清单，不要创建外部 issue。",
+  "observed_output": [
+    "先增加接受两种形式的兼容层，验证三个包编译与转换一致。",
+    "迁移一条典型调用链，保留旧客户端和存量消息支持。",
+    "其余调用链分批迁移，每批验证并记录剩余字符串使用。",
+    "全部内部调用完成后收紧类型，保留必要外部边界适配。",
+    "外部调用方和存量数据满足退出条件后移除旧形式。"
+  ],
+  "assessment": "passed for planning scope",
+  "evidence_limits": "Only a generated task plan was evaluated; no implementation, external issue creation or before/after model comparison."
+}

@@ -26,7 +26,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "64382d926f2f47de2b491f1bd93580d191e83b3c",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/check",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -41,7 +46,12 @@
       "provenance": {
         "source": "mattpocock/skills",
         "original_folder_hash": "20b7cd1dd1fe5b0bd37ba72649f3a29375574b5b",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/engineering/codebase-design",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
       }
     },
     {
@@ -55,7 +65,12 @@
       "provenance": {
         "source": "mattpocock/skills",
         "original_folder_hash": "959e63161ff78b4b1cd553b2c0e09e0c68418e5f",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/engineering/domain-modeling",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
       }
     },
     {
@@ -66,7 +81,12 @@
       "provenance": {
         "source": "mattpocock/skills",
         "original_folder_hash": "184d485ae68a2132893a94239b2b85d253e6152b",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/productivity/handoff",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
       }
     },
     {
@@ -80,7 +100,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "023e26f0f7bb8ff12ddfcab1f3c574a54bf6421f",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/health",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -94,7 +119,12 @@
       "provenance": {
         "source": "KevinYoung-Kw/vibe-resume-skill",
         "original_folder_hash": "f03335da4d7f6896160c61da00a94476952663c1",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "KevinYoung-Kw/vibe-resume-skill",
+          "path": ".",
+          "reviewed_commit": "650588e7c7c5d90cbacfb1cd806d35acff036519"
+        }
       }
     },
     {
@@ -109,7 +139,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "40f3a6394e3cf2ff738cf4abe8bf5ea6ea6b8fa0",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/hunt",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -122,7 +157,12 @@
       "provenance": {
         "source": "local; original author wondelai",
         "original_folder_hash": null,
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "wondelai/skills",
+          "path": "ios-hig-design",
+          "reviewed_commit": "eade5d170b3a593c5b6ebcaca898102134aee108"
+        }
       }
     },
     {
@@ -138,7 +178,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-calendar",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -157,7 +202,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-doc",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -174,7 +224,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-drive",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -191,7 +246,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-im",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -202,7 +262,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-shared",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -219,7 +284,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-task",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -236,7 +306,12 @@
       "provenance": {
         "source": "open.feishu.cn",
         "original_folder_hash": "",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-wiki",
+          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+        }
       }
     },
     {
@@ -251,7 +326,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "1aade816ebcb8917ed1a258e6b766731f829c0dc",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/learn",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -281,7 +361,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "20c840bd1ea5abb1fbf536205f00b6133a347c74",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/read",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -295,7 +380,12 @@
       "provenance": {
         "source": "mattpocock/skills",
         "original_folder_hash": "dcc584ff84c4f040ea12742fcb46b7c3ad7070bd",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/misc/setup-pre-commit",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
       }
     },
     {
@@ -341,7 +431,12 @@
       "provenance": {
         "source": "mattpocock/skills",
         "original_folder_hash": "423f3cc2bccf3b0ed426fb35eeb4b38d9188a343",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/engineering/tdd",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
       }
     },
     {
@@ -358,7 +453,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "a64d35b5883fc8847fb156131cbec88ac6e6d94a",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/think",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -372,7 +472,12 @@
       "provenance": {
         "source": "mattpocock/skills",
         "original_folder_hash": "80c1bedbdaa72a4abd524055013accb4fe0ea8c4",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/engineering/to-tickets",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
       }
     },
     {
@@ -385,7 +490,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "41b9ee63d946971efef17af703f6c4d1ef99d620",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/ui",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     },
     {
@@ -403,7 +513,12 @@
       "provenance": {
         "source": "tw93/Waza",
         "original_folder_hash": "b70897ecfc44dd52139d0d03b83112fdcbe33aa9",
-        "modified": true
+        "modified": true,
+        "upstream": {
+          "repository": "tw93/Waza",
+          "path": "skills/write",
+          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
       }
     }
   ]

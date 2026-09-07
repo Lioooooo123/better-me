@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "reviewed_at": "2026-09-07",
+  "baseline_meaning": "Reviewed upstream snapshots, not versions copied verbatim into local skills.",
+  "repositories": [
+    {
+      "repository": "KevinYoung-Kw/vibe-resume-skill",
+      "url": "https://github.com/KevinYoung-Kw/vibe-resume-skill.git",
+      "branch": "main",
+      "reviewed_commit": "650588e7c7c5d90cbacfb1cd806d35acff036519"
+    },
+    {
+      "repository": "larksuite/cli",
+      "url": "https://github.com/larksuite/cli.git",
+      "branch": "main",
+      "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+    },
+    {
+      "repository": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills.git",
+      "branch": "main",
+      "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+    },
+    {
+      "repository": "tw93/Waza",
+      "url": "https://github.com/tw93/Waza.git",
+      "branch": "main",
+      "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+    },
+    {
+      "repository": "wondelai/skills",
+      "url": "https://github.com/wondelai/skills.git",
+      "branch": "main",
+      "reviewed_commit": "eade5d170b3a593c5b6ebcaca898102134aee108"
+    }
+  ],
+  "skills": [
+    {
+      "name": "asu-skills",
+      "status": "local",
+      "reason": "No registered upstream; maintained locally."
+    },
+    {
+      "name": "check",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/check",
+      "tree_oid": "ce64a78da2a63baa13a91ba1012f2a48f9bfc83a",
+      "entry_sha256": "d4022d1022067bc7550c5482be0f3675ec077c864c25b97f0cc87ff2a5b99c1e"
+    },
+    {
+      "name": "codebase-design",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/codebase-design",
+      "tree_oid": "344e3efc88ee60663b2e989555c2efdb548fbd42",
+      "entry_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2"
+    },
+    {
+      "name": "domain-modeling",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/domain-modeling",
+      "tree_oid": "388c9822641805ca2dcd5038e68a1d5282437ee5",
+      "entry_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e"
+    },
+    {
+      "name": "handoff",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/productivity/handoff",
+      "tree_oid": "2242e8f05424b8c2ae94194a90d97b88d16108ec",
+      "entry_sha256": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25"
+    },
+    {
+      "name": "health",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/health",
+      "tree_oid": "99dcc414a983c6a6acb38f2fc6b8475850dcda3a",
+      "entry_sha256": "ddf50c9e23621acdd8ee081d0a20b93321e3d1e28faee40755b047bddc1501c1"
+    },
+    {
+      "name": "html-resume-builder",
+      "status": "reviewed",
+      "repository": "KevinYoung-Kw/vibe-resume-skill",
+      "path": ".",
+      "tree_oid": "198790bc32529922200d0a5e4896e2bd64f64522",
+      "entry_sha256": "30e626ce776aad83830933ad13499776ce7245c717a1c774ad3c5329076b5455"
+    },
+    {
+      "name": "hunt",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/hunt",
+      "tree_oid": "c8e9a3e9238a39c675c198947acad98baca865b6",
+      "entry_sha256": "ac9b5a0d4de6bf60027af238a8e1bf3675da3179df8f4ec21a4edf17f327075b"
+    },
+    {
+      "name": "ios-hig-design",
+      "status": "reviewed",
+      "repository": "wondelai/skills",
+      "path": "ios-hig-design",
+      "tree_oid": "1cc0947c9e8b100534e48b2c40dc51ef7c75711d",
+      "entry_sha256": "f7df1697b146a20d022ba4bd964e53a43be93285c50b9a537f0e01a583e56a26"
+    },
+    {
+      "name": "lark-calendar",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-calendar",
+      "tree_oid": "95b3b893ca823ec42ad7557b10bd788333c65bf0",
+      "entry_sha256": "31f26bd7c91008edfc890d3693772a14066353ac5a2c8d6b5220bd47f495982c"
+    },
+    {
+      "name": "lark-doc",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-doc",
+      "tree_oid": "423eafd31ccead70054cb24189491e93cb20af54",
+      "entry_sha256": "1c2aa910831a117b6ef4484469a3456775cef26a00beb8b38f470ee74654fb96"
+    },
+    {
+      "name": "lark-drive",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-drive",
+      "tree_oid": "b8378f1942cd7bc0e76c2824f29c2c8b97cc6b66",
+      "entry_sha256": "b140cd55b62be7f001384fb47627dc269ef08db3b943d0eb8c6aa4ef1bc9b685"
+    },
+    {
+      "name": "lark-im",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-im",
+      "tree_oid": "8fc75888ba97116d69453542e802ff8cf9d5f593",
+      "entry_sha256": "8d272993a64bd892c120da2bb8c1c11083b23aefa51d5e32f2f27e9a47519791"
+    },
+    {
+      "name": "lark-shared",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-shared",
+      "tree_oid": "1ee7e9dce1377a7038ab798e1ac5813ed608f4e1",
+      "entry_sha256": "9fa68bb1f3ce564602c6df6c303ea4d2759de02442772f332fe5041d65720a1f"
+    },
+    {
+      "name": "lark-task",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-task",
+      "tree_oid": "4c615021a475f71e431431b85d78af051d03505b",
+      "entry_sha256": "f69e7f68432723240710a90ad390d97f777f5511868743d00a8478180a6a0d7a"
+    },
+    {
+      "name": "lark-wiki",
+      "status": "reviewed",
+      "repository": "larksuite/cli",
+      "path": "skills/lark-wiki",
+      "tree_oid": "f414d0100e7afa397a1084a3a31f299b1ae5b7a3",
+      "entry_sha256": "d77b966ab246078b7ef050e4fbdf3f8dfa74ed76e03dab1e4f793c1a0a7bf2c2"
+    },
+    {
+      "name": "learn",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/learn",
+      "tree_oid": "afa0ddb1a3b917561b4aa16a7380f0b832608782",
+      "entry_sha256": "5998bb03432802b34f3d2a2c7eb43010d7cda9dbbabedf5344a4792284d3d06c"
+    },
+    {
+      "name": "obsidian-vault",
+      "status": "path_not_found",
+      "repository": "mattpocock/skills",
+      "reason": "No matching skill directory in reviewed snapshot; no deletion or replacement inferred."
+    },
+    {
+      "name": "read",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/read",
+      "tree_oid": "13d86e01f828487bfb548979ef1ebebcd4c197f8",
+      "entry_sha256": "080faca57dcb145405e01918142e301cc04248cd1bfbd4fe44a9e827255d8a13"
+    },
+    {
+      "name": "setup-pre-commit",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/misc/setup-pre-commit",
+      "tree_oid": "5b63f9f665bacc9be04cae51982e9ef1469d6699",
+      "entry_sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98"
+    },
+    {
+      "name": "skill-hub",
+      "status": "local",
+      "reason": "No registered upstream; maintained locally."
+    },
+    {
+      "name": "tdd",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/tdd",
+      "tree_oid": "79288be15c67b849f22b6572056601090fd20913",
+      "entry_sha256": "cb01f66bebfaa25fa1f88e6b7e769cd9fd9f35b1120b8563749820738814c927"
+    },
+    {
+      "name": "think",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/think",
+      "tree_oid": "94ff3b3967da65b78fac5da42a3fc355383910b2",
+      "entry_sha256": "eac06d1b884bb825fe24dd62bca6ebdd3474b02cc1df67bcf21f71ade765ecfd"
+    },
+    {
+      "name": "to-tickets",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/to-tickets",
+      "tree_oid": "b32c94e5a51c24ee9c41fcb7fe9ea9fff9af6369",
+      "entry_sha256": "5c9fba69845c2519b9b35b9af42ae5142c21f8ca15ac2123dc2722002c8058ae"
+    },
+    {
+      "name": "ui",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/ui",
+      "tree_oid": "cdf9f63196aef6cb49342569ff5fe8edc5cc6187",
+      "entry_sha256": "5873cbafe60039c4e8043ccca2a5cfc933c7de7e9db20fbf485c28551523fb13"
+    },
+    {
+      "name": "write",
+      "status": "reviewed",
+      "repository": "tw93/Waza",
+      "path": "skills/write",
+      "tree_oid": "615d8f39c927c8d6b7203c1c4ffb6e52548cc33f",
+      "entry_sha256": "d35ead1c5f70367277978da54b74375ec865798e446ad8be2a41fcb645cf638b"
+    }
+  ]
+}

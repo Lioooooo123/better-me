@@ -162,3 +162,5 @@ lark-cli api GET /open-apis/im/v1/messages \
 
 - [lark-im](../SKILL.md) - all IM commands
 - [lark-shared](../../lark-shared/SKILL.md) - authentication and global parameters
+
+文件夹标签不保证列出全部内容或自动下载目录。上游新版的一层展开、截断标记和显式子文件下载见 [文件夹结果与版本边界](lark-im-messages-mget.md#文件夹结果与版本边界)；本机 `1.0.92` 不预设具备新版渲染。

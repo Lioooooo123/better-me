@@ -17,6 +17,7 @@ metadata:
 | 创建日程 | [create](references/lark-calendar-create.md) |
 | 改字段、增减参与者 | [update](references/lark-calendar-update.md) |
 | 可用时段或会议室 | [suggestion](references/lark-calendar-suggestion.md)、[room-find](references/lark-calendar-room-find.md) |
+| 查询参与人、会议室名单 | [list-attendees](references/lark-calendar-list-attendees.md) |
 | 重复日程 | [recurring](references/lark-calendar-recurring.md) |
 | 接受/拒绝、分享加入 | [rsvp](references/lark-calendar-rsvp.md)、[join-event](references/lark-calendar-join-event.md) |
 

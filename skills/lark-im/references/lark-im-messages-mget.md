@@ -57,7 +57,7 @@ For `post` messages, the attachment zone (top-level `files` array) is rendered a
 - `<file key="file_xxx"/>` — a file with an empty display name (the server always backfills names, so this branch is rare but valid on the wire)
 - `<folder key="file_xxx" name="assets"/>` — a folder (`is_folder: true`, same tag style as a standalone `folder` message)
 
-Use `--format json` to see the full content without table truncation — note the content is the rendered text (including the `<file>`/`<folder>` lines above), not the raw post JSON. Attachment file keys rendered in the tags are eligible for [`+messages-resources-download`](lark-im-messages-resources-download.md) via `--download-resources`.
+Use `--format json` to see the full content without table truncation — note the content is the rendered text (including the `<file>`/`<folder>` lines above), not the raw post JSON. Top-level file attachments are eligible for automatic download via `--download-resources`; folder entries themselves are not single-file resources. Download a known file explicitly with [`+messages-resources-download`](lark-im-messages-resources-download.md).
 
 ## Usage Scenarios
 
@@ -105,3 +105,9 @@ lark-cli im +messages-mget --message-ids "om_aaa,om_bbb"
 
 - [lark-im](../SKILL.md) - all IM commands
 - [lark-shared](../../lark-shared/SKILL.md) - authentication and global parameters
+
+## 文件夹结果与版本边界
+
+上游新版可把文件夹展开一层，显示 `child_count`，超过 10 个首层项目时以 `has_more="true"` 标记截断；本机 `1.0.92` 未验证具备该渲染能力，不能假定读消息已列出目录内容。没有子项不等于空文件夹，只有明确 `child_count="0"` 才能据此判空。
+
+实际返回 `<folder>` 子项时，子文件可用原 `message_id` 与其自己的 `file_key` 显式下载；文件夹本身不能作为单文件下载。`--download-resources` 不代表递归下载，也不会自动收集新版渲染阶段展开的子文件；嵌套文件夹、截断列表和下载失败项需按任务需要继续处理。

@@ -13,7 +13,7 @@ description: 用 HTML 模板制作或修改简历，导出并检查一页 PDF。
 
 编辑生成的 HTML，检查姓名、联系信息、时间、链接及样例占位符。模板头像和二维码是示例资源，未提供真实素材时移除对应块，不把样例作为用户材料发布。
 
-导出使用 `python3 scripts/export_and_qa.py <resume.html> --pdf <resume.pdf> --strict-final`。实际选项可先读 `--help`；相关修改集中后导出一次，需要修版再重跑。
+导出使用 `python3 scripts/export_and_qa.py <resume.html> --pdf <resume.pdf> --strict-final`。需要确认沿用某个模板时加 `--template basic-a4`（或实际模板名），核对 HTML 身份标记与选择一致；自定义或已有用户简历可省略。标记只证明声明一致，不证明视觉没有被改动。实际选项可先读 `--help`；相关修改集中后导出一次，需要修版再重跑。
 
 最终交付需确认预期页数、字体、文本顺序、无裁切与可读性。缺必要工具或未完成目视检查就明确未完成该层验证；JSON 通过也不等于人工视觉验收。仅生成预览时可以省略 `--strict-final`，但应报告未执行检查。
 

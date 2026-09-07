@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import html as html_lib
+from html.parser import HTMLParser
 import json
 import re
 import shutil
@@ -22,6 +23,26 @@ STRICT_FINAL_FORBIDDEN_TERMS = [
     "candidate@example.com",
     "example.com",
 ]
+
+
+def check_template_fingerprint(html: Path, checks: list[dict], expected: str | None) -> None:
+    """Check an explicitly selected template, without restricting custom layouts."""
+    if expected is None:
+        return
+
+    class TemplateParser(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.identifiers = []
+
+        def handle_starttag(self, tag, attrs):
+            self.identifiers.extend(value for key, value in attrs if key == 'data-template')
+
+    parser = TemplateParser()
+    parser.feed(html.read_text(encoding='utf-8'))
+    found = list(dict.fromkeys(parser.identifiers))
+    add_check(checks, 'selected template matches', found == [expected],
+              f'Expected {expected!r}; found {found!r}. Template identity does not verify visual layout.')
 
 
 def find_forbidden_terms(haystack: str, terms: list[str]) -> list[str]:
@@ -564,6 +585,7 @@ def main() -> int:
     parser.add_argument("--expected-font", help="Font substring expected in pdffonts output. Defaults to the template manifest, then PingFang.")
     parser.add_argument("--forbid-term", action="append", default=[], help="Additional forbidden term to scan.")
     parser.add_argument("--strict-final", action="store_true", help="Require verification dependencies and reject bundled demo/template leftovers.")
+    parser.add_argument("--template", help="Optional expected data-template identity, including custom template names.")
     parser.add_argument(
         "--max-bottom-whitespace",
         type=float,
@@ -594,6 +616,7 @@ def main() -> int:
     )
 
     checks: list[dict] = []
+    check_template_fingerprint(html, checks, args.template)
     chrome = find_chrome(args.chrome)
     if not chrome:
         add_check(checks, "Chrome available", False, "Chrome/Chromium was not found.", skipped=True)

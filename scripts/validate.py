@@ -17,6 +17,20 @@ def validate(root=ROOT):
     actual = {p.parent.name for p in (root / 'skills').glob('*/SKILL.md')}
     if len(names) != len(items) or names != actual:
         errors.append('Catalog and skill directories differ or contain duplicates')
+    upstream = json.loads((root / 'catalog/upstream-state.json').read_text())
+    repositories = {item['repository']: item for item in upstream['repositories']}
+    tracked = upstream['skills']
+    if {item['name'] for item in tracked} != names or len(tracked) != len(names):
+        errors.append('Upstream state and skill catalog differ')
+    for repository in repositories.values():
+        if not re.fullmatch(r'[0-9a-f]{40}', repository['reviewed_commit']):
+            errors.append(f'Invalid upstream revision: {repository["repository"]}')
+    for item in tracked:
+        if item['status'] == 'reviewed':
+            if item['repository'] not in repositories or '..' in Path(item['path']).parts or Path(item['path']).is_absolute():
+                errors.append(f'Invalid upstream mapping: {item["name"]}')
+            if not re.fullmatch(r'[0-9a-f]{40}', item['tree_oid']) or not re.fullmatch(r'[0-9a-f]{64}', item['entry_sha256']):
+                errors.append(f'Invalid upstream fingerprint: {item["name"]}')
     for item in items:
         name = item['name']
         base = root / 'skills' / name

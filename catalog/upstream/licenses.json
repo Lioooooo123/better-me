@@ -16,5 +16,17 @@
     "license": "NOASSERTION",
     "url": "https://github.com/KevinYoung-Kw/vibe-resume-skill/blob/main/LICENSE",
     "blob_sha": "af1e98d3bdaaf8e69ddf8be1418e5a206d08848c"
+  },
+  {
+    "repo": "larksuite/cli",
+    "license": "MIT",
+    "url": "https://github.com/larksuite/cli/blob/7fd6ef3c07182257ce776cdc5a614e122d5bd4b3/LICENSE",
+    "blob_sha": "2b8bbb5e9c46b1abc3a5ac68ee190baf046ba968"
+  },
+  {
+    "repo": "wondelai/skills",
+    "license": "MIT",
+    "url": "https://github.com/wondelai/skills/blob/eade5d170b3a593c5b6ebcaca898102134aee108/LICENSE",
+    "blob_sha": "9b62238504f0feb80cf3b390f181cef476c60d9e"
   }
 ]

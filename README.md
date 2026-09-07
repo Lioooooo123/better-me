@@ -49,9 +49,21 @@ python3 -m venv .venv
 
 [清单](catalog/skills.json)记录依赖、可选伙伴和来源；[场景用例](evals/scenarios.json)记录行为验收标准。静态检查和脚本回归不等于模型实跑；未执行模型对照，不宣称速度、token 或任务成功率改善。
 
-原 42 个技能入口合计 503,356 字节，新 26 个合计 43,584 字节，减少 91.3%。这包含移除技能的贡献；是入口体积变化，不是上下文或性能测量。
+首次迁移时，原 42 个技能入口合计 503,356 字节，新 26 个合计 43,584 字节，减少 91.3%。这包含移除技能的贡献；是入口体积变化，不是上下文或性能测量。
 
 - [设计依据](docs/design.md)
 - [来源与许可](docs/provenance.md)
 - [验证记录](docs/verification.md)
 - [首次审计](audits/2026-09-05/skill-audit.md)与[原始清单](audits/2026-09-05/skill-inventory.json)保留为修改前快照。
+
+## 上游更新
+
+```sh
+python3 scripts/check_upstream.py
+```
+
+只读检查 5 个上游分支是否相对审阅版本变化，不安装或覆盖技能。`repository_changed` 仅代表仓库有变化；下一步按 [上游状态](catalog/upstream-state.json) 中的目录、commit 与树指纹比对，再选择性合入并验证。此文件是审阅基线，不是声称本地完全等于上游的安装锁。
+
+23 个技能已核实上游路径；`obsidian-vault` 暂未在其登记来源的当前快照中找到，保留本地版本。`asu-skills` 与 `skill-hub` 为本地维护。官方系统和插件缓存仍由上游安装机制管理。
+
+[2026-09-07 更新记录](docs/upstream-review-2026-09-07.md)列出本次采纳、跳过和实际验证。

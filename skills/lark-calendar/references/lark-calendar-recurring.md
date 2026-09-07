@@ -1,19 +1,23 @@
 # 重复性日程操作规范
 
-重复性日程的编辑/删除分为三种范围：「仅此次」「全部」「此次及后续」。用户未明确范围时，**必须询问确认**。
+重复性日程的编辑/删除分为三种范围：「仅此次」「全部」「此次及后续」。用户未明确范围时先澄清；已有具体范围授权直接复用。
+
+本文按本机 `lark-cli 1.0.92` 编写：该版本没有 `calendar +delete` 或 `+update --apply-to`。上游新版已提供范围化操作，但仅在安装版本的 `--help` 确认支持后使用，不能把新参数直接套到本版本。
 
 ## 关键概念
 
-- **event_id 结构**：`event_id` 的格式为 `{event_uid}_{originalTime}`。普通日程或重复性日程本体的 `originalTime` 为 `0`；例外的 `originalTime > 0`，代表该例外在原重复性序列中本来的时间位置。因此 `{event_uid}_0` 即为原重复性日程的 `event_id`。
+- **event_id 结构**：`event_id` 的格式为 `{event_uid}_{originalTime}`。普通日程或重复性日程本体的 `originalTime` 为 `0`；实例和例外的 `originalTime > 0`，代表该次发生在原重复性序列中本来的时间位置。因此 `{event_uid}_0` 即为原重复性日程的 `event_id`。
 - **原重复性日程**：携带 `rrule` 的日程本体，`event_id` 形如 `{event_uid}_0`。系列的所有属性（标题、时间、rrule、描述等）都挂在本体上。
+- **实例（Instance）**：按重复规则展开的某次发生点，`event_id` 同样形如 `{event_uid}_{originalTime}`（`originalTime > 0`），未被独立修改时继承主日程。
 - **例外（Exception）**：对某次实例做过「仅此次」编辑后产生的独立日程，`event_id` 形如 `{event_uid}_{originalTime}`（`originalTime > 0`）。通过 `event_uid` 部分即可关联回原重复性日程。
-- 删除/更新原重复性日程 **不会** 级联处理例外——必须手动逐个处理。
+- 实例与例外的 ID 形状相同，不能凭正数后缀认定为例外。查询 `calendar +get` 的 `is_exception`：`true` 才是例外；字段未返回时不能仅凭缺省值下结论，可读取原生 `events get` 响应核实。
+- 本版本删除/更新原重复性日程 **不会** 自动处理例外；按已授权的范围读取并逐个处理，不把所有实例当作例外清理。
 
 ## 前置步骤（所有范围通用）
 
 1. 通过 `+agenda` 或 `+search-event` 定位重复性日程，获取原重复性日程的 `event_id`。
-2. 通过 `events instance_view` 或 `+agenda` 列出实例，识别哪些是例外（`event_id` 中 `originalTime > 0` 的即为例外）。
-3. 确认用户的操作范围。
+2. 通过 `events instance_view` 或 `+agenda` 列出实例，用 `is_exception=true` 识别例外；遇到字段缺失时读取详情核实，不能使用 ID 后缀代替类型判断。
+3. 复用用户已明确的操作范围；尚有歧义时再澄清。
 
 ## 编辑全部（更新时间）
 
