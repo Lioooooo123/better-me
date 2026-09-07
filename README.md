@@ -42,8 +42,7 @@ python3 scripts/manage.py rollback --apply
 ```sh
 python3 -m venv .venv
 .venv/bin/pip install -r requirements-dev.txt
-.venv/bin/python scripts/validate.py
-.venv/bin/python -m unittest discover -s tests -v
+make check PYTHON=.venv/bin/python
 ```
 
 [清单](catalog/skills.json)记录依赖、可选伙伴和来源；[场景用例](evals/scenarios.json)记录行为验收标准。静态检查和脚本回归不等于模型实跑；未执行模型对照，不宣称速度、token 或任务成功率改善。
@@ -58,10 +57,12 @@ python3 -m venv .venv
 ## 上游更新
 
 ```sh
-python3 scripts/check_upstream.py
+make upstream
 ```
 
-只读检查 6 个上游分支是否相对审阅版本变化，不安装或覆盖技能。`repository_changed` 仅代表仓库有变化；下一步按 [上游状态](catalog/upstream-state.json) 中的目录、commit 与树指纹比对，再选择性合入并验证。此文件是审阅基线，不是声称本地完全等于上游的安装锁。
+只读检查 6 个上游仓库，并按技能目录树指纹区分 `unchanged`、`skill_changed`、`path_missing` 和 `error`。`repository_changed` 仅表示分支有变化，不代表技能更新。查询失败或响应被截断会返回错误，不能当成没有更新。基础分支检查仍可用 `python3 scripts/check_upstream.py`。
+
+检查固定到本次解析的 commit，不安装、覆盖技能或推进[审阅基线](catalog/upstream-state.json)。本地有改写，发现更新后仍需选择性合入并验证；该文件不是本地等同于上游的安装锁。
 
 24 个技能已核实上游路径；`obsidian-vault` 暂未在其登记来源的当前快照中找到，保留本地版本。官方系统和插件缓存仍由上游安装机制管理。
 
@@ -72,3 +73,5 @@ python3 scripts/check_upstream.py
 新增 gh-fix-ci 和 resolving-merge-conflicts：分别处理 GitHub Actions 失败与正在进行的 Git 冲突。没有重建总入口。仓库与本机源码目录改名为 praxis；历史备份继续使用 ~/.codex/skill-hub/，避免破坏已有恢复记录。
 
 [命名与候选筛选记录](docs/praxis-curation.md)记录新增原因、暂不纳入的候选及验证范围。
+
+维护流程见 [CONTRIBUTING.md](CONTRIBUTING.md)；与 Vercel 的对照及取舍见[维护设计](docs/maintenance.md)。
