@@ -28,5 +28,12 @@
     "license": "MIT",
     "url": "https://github.com/wondelai/skills/blob/eade5d170b3a593c5b6ebcaca898102134aee108/LICENSE",
     "blob_sha": "9b62238504f0feb80cf3b390f181cef476c60d9e"
+  },
+  {
+    "repo": "openai/skills",
+    "license": "Apache-2.0",
+    "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/LICENSE.txt",
+    "scope": "gh-fix-ci",
+    "modified": true
   }
 ]

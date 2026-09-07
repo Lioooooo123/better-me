@@ -1,13 +1,13 @@
-# Personal Codex Skill Hub
+# Praxis · 知行
 
-个人编码与工作技能源码。23 个技能按实际任务组合，共享已有材料、决定与验证结果；小任务直接完成，不必跑固定流水线。
+把方法用于实际工作。个人编码与工作技能源码。25 个技能按实际任务组合，共享已有材料、决定与验证结果；小任务直接完成，不必跑固定流水线。
 
 | 工作 | 技能 |
 |---|---|
 | 编码与设计 | think、hunt、check、tdd、codebase-design、domain-modeling、ui、ios-hig-design |
 | 研究与表达 | read、learn、write、obsidian-vault |
 | 求职交付 | html-resume-builder |
-| 维护与交接 | health、handoff、to-tickets |
+| 维护与交接 | health、handoff、to-tickets、gh-fix-ci、resolving-merge-conflicts |
 | 飞书 | lark-shared、lark-doc、lark-drive、lark-wiki、lark-im、lark-calendar、lark-task |
 
 `handoff` 和 `to-tickets` 继续保持仅显式调用。其余按描述触发，不会自动安装缺失插件。模型和推理参数由 Codex 配置管理。
@@ -26,11 +26,11 @@
 仓库应留在固定位置。安装后的个人技能是指向本仓库的符号链接，修改源码即可更新；已加载的 Codex 任务可能需要新建任务才能读取新版本。
 
 ```sh
-python3 scripts/hub.py install          # 预览
-python3 scripts/hub.py install --apply  # 备份后安装
-python3 scripts/hub.py status
-python3 scripts/hub.py rollback         # 预览恢复
-python3 scripts/hub.py rollback --apply
+python3 scripts/manage.py install          # 预览
+python3 scripts/manage.py install --apply  # 备份后安装
+python3 scripts/manage.py status
+python3 scripts/manage.py rollback         # 预览恢复
+python3 scripts/manage.py rollback --apply
 ```
 
 默认安装到 `~/.agents/skills/`，备份与迁移日志在 `~/.codex/skill-hub/`。可用 `--home <directory>` 隔离验证。首次迁移只替换已记录且整棵目录指纹一致的原技能，遇到未知或已修改内容就停止。系统技能和插件缓存不在范围内。锁文件只更新本仓库管理的条目；恢复前检查冲突，并保留无关条目的后续修改。
@@ -61,10 +61,14 @@ python3 -m venv .venv
 python3 scripts/check_upstream.py
 ```
 
-只读检查 5 个上游分支是否相对审阅版本变化，不安装或覆盖技能。`repository_changed` 仅代表仓库有变化；下一步按 [上游状态](catalog/upstream-state.json) 中的目录、commit 与树指纹比对，再选择性合入并验证。此文件是审阅基线，不是声称本地完全等于上游的安装锁。
+只读检查 6 个上游分支是否相对审阅版本变化，不安装或覆盖技能。`repository_changed` 仅代表仓库有变化；下一步按 [上游状态](catalog/upstream-state.json) 中的目录、commit 与树指纹比对，再选择性合入并验证。此文件是审阅基线，不是声称本地完全等于上游的安装锁。
 
-22 个技能已核实上游路径；`obsidian-vault` 暂未在其登记来源的当前快照中找到，保留本地版本。官方系统和插件缓存仍由上游安装机制管理。
+24 个技能已核实上游路径；`obsidian-vault` 暂未在其登记来源的当前快照中找到，保留本地版本。官方系统和插件缓存仍由上游安装机制管理。
 
 [2026-09-07 更新记录](docs/upstream-review-2026-09-07.md)列出本次采纳、跳过和实际验证。
 
 已按用户要求移除 skill-hub、setup-pre-commit、asu-skills 三个入口。仓库仍用于维护其他技能，移除入口不影响它们独立使用。本机 Figma 插件已卸载，Google Drive 插件已停用。历史审计与更新记录保留当时范围。
+
+新增 gh-fix-ci 和 resolving-merge-conflicts：分别处理 GitHub Actions 失败与正在进行的 Git 冲突。没有重建总入口。仓库与本机源码目录改名为 praxis；历史备份继续使用 ~/.codex/skill-hub/，避免破坏已有恢复记录。
+
+[命名与候选筛选记录](docs/praxis-curation.md)记录新增原因、暂不纳入的候选及验证范围。

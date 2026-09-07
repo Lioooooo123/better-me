@@ -6,7 +6,9 @@
       "requires": [],
       "companions": [
         "codebase-design",
-        "hunt"
+        "hunt",
+        "gh-fix-ci",
+        "resolving-merge-conflicts"
       ],
       "explicit_only": false,
       "provenance": {
@@ -56,6 +58,25 @@
           "repository": "mattpocock/skills",
           "path": "skills/engineering/domain-modeling",
           "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+        }
+      }
+    },
+    {
+      "name": "gh-fix-ci",
+      "requires": [],
+      "companions": [
+        "check",
+        "hunt"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "openai/skills",
+        "original_folder_hash": null,
+        "modified": true,
+        "upstream": {
+          "repository": "openai/skills",
+          "path": "skills/.curated/gh-fix-ci",
+          "reviewed_commit": "49f948faa9258a0c61caceaf225e179651397431"
         }
       }
     },
@@ -118,7 +139,8 @@
       "companions": [
         "check",
         "codebase-design",
-        "tdd"
+        "tdd",
+        "gh-fix-ci"
       ],
       "explicit_only": false,
       "provenance": {
@@ -351,6 +373,25 @@
           "repository": "tw93/Waza",
           "path": "skills/read",
           "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+        }
+      }
+    },
+    {
+      "name": "resolving-merge-conflicts",
+      "requires": [],
+      "companions": [
+        "check",
+        "hunt"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "mattpocock/skills",
+        "original_folder_hash": null,
+        "modified": true,
+        "upstream": {
+          "repository": "mattpocock/skills",
+          "path": "skills/engineering/resolving-merge-conflicts",
+          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
         }
       }
     },

@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-SPEC = importlib.util.spec_from_file_location('hub', Path(__file__).resolve().parents[1] / 'scripts/hub.py')
+SPEC = importlib.util.spec_from_file_location('hub', Path(__file__).resolve().parents[1] / 'scripts/manage.py')
 hub = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(hub)
 

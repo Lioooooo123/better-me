@@ -16,3 +16,5 @@
 `original_folder_hash` 是原安装器目录哈希，不是上游 commit。迁移基线的 SHA-256 是本机快照指纹，不代表上游最新版本。来源缺口保持明确，不伪造版本、作者或授权。
 
 上游追踪补充：catalog/upstream-state.json 记录本次实际审阅的 5 个仓库 commit、23 个技能目录和树指纹，不表示本地内容与上游逐字相同。obsidian-vault 在标注来源的当前快照中未找到，继续保留本地版本；asu-skills 与 skill-hub 为本地维护。
+
+Praxis 扩充：gh-fix-ci 参考 openai/skills，保留 Apache-2.0 原许可，重写入口并复用现有 gh CLI，未导入额外检查脚本；resolving-merge-conflicts 参考 mattpocock/skills（MIT），保留冲突意图分析并调整暂存、取消和提交边界。准确路径与审阅 commit 见 upstream-state.json。

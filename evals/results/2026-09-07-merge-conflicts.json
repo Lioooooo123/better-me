@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-07",
+  "mode": "independent_execution_trial",
+  "skill": "resolving-merge-conflicts",
+  "fixture": "Conflicting JSON configuration changes: timeout and retries, plus unrelated untracked notes.",
+  "observed": {
+    "merged_settings": {
+      "timeout": 30,
+      "retries": 3
+    },
+    "merge_parents": 2,
+    "unmerged_entries": 0,
+    "unrelated_file_unchanged": true,
+    "unrelated_file_untracked": true,
+    "pushed": false
+  },
+  "assessment": "passed",
+  "limits": "One isolated local merge; not a rebase or broad effectiveness benchmark."
+}

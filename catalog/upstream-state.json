@@ -32,6 +32,12 @@
       "url": "https://github.com/wondelai/skills.git",
       "branch": "main",
       "reviewed_commit": "eade5d170b3a593c5b6ebcaca898102134aee108"
+    },
+    {
+      "repository": "openai/skills",
+      "url": "https://github.com/openai/skills.git",
+      "branch": "main",
+      "reviewed_commit": "49f948faa9258a0c61caceaf225e179651397431"
     }
   ],
   "skills": [
@@ -58,6 +64,14 @@
       "path": "skills/engineering/domain-modeling",
       "tree_oid": "388c9822641805ca2dcd5038e68a1d5282437ee5",
       "entry_sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e"
+    },
+    {
+      "name": "gh-fix-ci",
+      "status": "reviewed",
+      "repository": "openai/skills",
+      "path": "skills/.curated/gh-fix-ci",
+      "tree_oid": "3f99938c9464393f27cc4cc00e4ba17387517803",
+      "entry_sha256": "7b326b4a2f0f5f85122144628ec02077e48841e0e0e82efce88b3415bcfb7c26"
     },
     {
       "name": "handoff",
@@ -176,6 +190,14 @@
       "path": "skills/read",
       "tree_oid": "13d86e01f828487bfb548979ef1ebebcd4c197f8",
       "entry_sha256": "080faca57dcb145405e01918142e301cc04248cd1bfbd4fe44a9e827255d8a13"
+    },
+    {
+      "name": "resolving-merge-conflicts",
+      "status": "reviewed",
+      "repository": "mattpocock/skills",
+      "path": "skills/engineering/resolving-merge-conflicts",
+      "tree_oid": "77f0d7de3143abbf03e55a63522d30bff31ae908",
+      "entry_sha256": "9d8114f8ef0b31f535a265fc05c364bd8cf2e2895a830040e06c22acb11f54b0"
     },
     {
       "name": "tdd",

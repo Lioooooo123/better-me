@@ -8,6 +8,7 @@ from pathlib import Path
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
+# Keep the legacy state directory so existing migration backups remain recoverable.
 
 
 def exists(path):
@@ -98,7 +99,7 @@ def install(home, apply=False, root=ROOT):
     lock_data = json.loads(old_lock) if old_lock else {'version': 3, 'skills': {}}
     names = {item['name'] for item in baseline} | {item['name'] for item in catalog}
     old_entries = {name: lock_data['skills'][name] for name in names if name in lock_data['skills']}
-    new_entries = {item['name']: {'source': 'Lioooooo123/skill-hub', 'sourceType': 'local',
+    new_entries = {item['name']: {'source': 'Lioooooo123/praxis', 'sourceType': 'local',
                    'sourceUrl': str(root), 'skillPath': f'skills/{item["name"]}/SKILL.md'} for item in catalog}
     backup = safe_path(home, f'.codex/skill-hub/backups/{time.time_ns()}')
     backup.mkdir(parents=True)
