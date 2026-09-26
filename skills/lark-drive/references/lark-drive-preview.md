@@ -1,6 +1,6 @@
 ## `drive +preview`
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、权限处理和安全规则。
+> 认证、权限或全局参数存在疑问时，按需阅读 [lark-shared](../../lark-shared/SKILL.md)，复用已确认的身份与契约。
 
 查看或下载 Drive 文件内容，或列出并获取文件可用的预览产物。对象是 Drive **文件**，也支持 Wiki URL / node token（CLI 先把 Wiki 节点解析到底层文件，`obj_type` 必须是 `file`）。这个 shortcut 不猜测默认类型：
 

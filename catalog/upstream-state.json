@@ -1,8 +1,14 @@
 {
   "version": 1,
-  "reviewed_at": "2026-09-07",
+  "reviewed_at": "2026-09-26",
   "baseline_meaning": "Reviewed upstream snapshots, not versions copied verbatim into local skills.",
   "repositories": [
+    {
+      "repository": "jakubkrehel/skills",
+      "url": "https://github.com/jakubkrehel/skills.git",
+      "branch": "main",
+      "reviewed_commit": "267330e1adfc66a718fb65fa6918c1f06d0a689e"
+    },
     {
       "repository": "KevinYoung-Kw/vibe-resume-skill",
       "url": "https://github.com/KevinYoung-Kw/vibe-resume-skill.git",
@@ -13,41 +19,55 @@
       "repository": "larksuite/cli",
       "url": "https://github.com/larksuite/cli.git",
       "branch": "main",
-      "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+      "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
     },
     {
       "repository": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills.git",
       "branch": "main",
-      "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+      "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
     },
     {
-      "repository": "tw93/Waza",
-      "url": "https://github.com/tw93/Waza.git",
+      "repository": "millionco/react-doctor",
+      "url": "https://github.com/millionco/react-doctor.git",
       "branch": "main",
-      "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
-    },
-    {
-      "repository": "wondelai/skills",
-      "url": "https://github.com/wondelai/skills.git",
-      "branch": "main",
-      "reviewed_commit": "eade5d170b3a593c5b6ebcaca898102134aee108"
+      "reviewed_commit": "d741d58e7831e37c9f6a5528340c103059bd1ccf"
     },
     {
       "repository": "openai/skills",
       "url": "https://github.com/openai/skills.git",
       "branch": "main",
       "reviewed_commit": "49f948faa9258a0c61caceaf225e179651397431"
+    },
+    {
+      "repository": "tw93/Waza",
+      "url": "https://github.com/tw93/Waza.git",
+      "branch": "main",
+      "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
+    },
+    {
+      "repository": "wondelai/skills",
+      "url": "https://github.com/wondelai/skills.git",
+      "branch": "main",
+      "reviewed_commit": "c172996495bed0fcd26896a9416b2093fd7073f0"
     }
   ],
   "skills": [
+    {
+      "name": "better-ui",
+      "status": "reviewed",
+      "repository": "jakubkrehel/skills",
+      "path": "skills/better-ui",
+      "tree_oid": "710b8e9a1b4086594d24050bbb6768dbc421e9dc",
+      "entry_sha256": "2482b7b89d851a3128d36edf5367f3223e113a4ef421b7358c7e6de3f2c83faf"
+    },
     {
       "name": "check",
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/check",
-      "tree_oid": "ce64a78da2a63baa13a91ba1012f2a48f9bfc83a",
-      "entry_sha256": "d4022d1022067bc7550c5482be0f3675ec077c864c25b97f0cc87ff2a5b99c1e"
+      "tree_oid": "609d4ab1ea386f55948a213ca5aac70ad864eff5",
+      "entry_sha256": "74839d6cb5528a06ab043476e609ae559693b91994b046aebf711e7a1d7abab0"
     },
     {
       "name": "codebase-design",
@@ -86,8 +106,8 @@
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/health",
-      "tree_oid": "99dcc414a983c6a6acb38f2fc6b8475850dcda3a",
-      "entry_sha256": "ddf50c9e23621acdd8ee081d0a20b93321e3d1e28faee40755b047bddc1501c1"
+      "tree_oid": "0899ad1e5f7fa40de9e0d6ba0d2a570403b20d02",
+      "entry_sha256": "b8141d48d51ddf873753e961427b47ab4ff9318e32d32e24168eadafd9c0f34b"
     },
     {
       "name": "html-resume-builder",
@@ -102,39 +122,47 @@
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/hunt",
-      "tree_oid": "c8e9a3e9238a39c675c198947acad98baca865b6",
-      "entry_sha256": "ac9b5a0d4de6bf60027af238a8e1bf3675da3179df8f4ec21a4edf17f327075b"
+      "tree_oid": "d62b8a89b441d0aa0e48ebf17b0fa8ead0e5faf6",
+      "entry_sha256": "8ae2315c6242a7f59a938650e398d977569831ade1346e0fceee5a12cf69d1a1"
+    },
+    {
+      "name": "improve-react",
+      "status": "reviewed",
+      "repository": "millionco/react-doctor",
+      "path": "skills/improve-react",
+      "tree_oid": "0ee95f8644a7a263db14d2a7530134578f7ccf11",
+      "entry_sha256": "c50776c79e15f53dd7769b4a4d33c3d9f1723d7f23064201e37086d15910d9ac"
     },
     {
       "name": "ios-hig-design",
       "status": "reviewed",
       "repository": "wondelai/skills",
       "path": "ios-hig-design",
-      "tree_oid": "1cc0947c9e8b100534e48b2c40dc51ef7c75711d",
-      "entry_sha256": "f7df1697b146a20d022ba4bd964e53a43be93285c50b9a537f0e01a583e56a26"
+      "tree_oid": "39343498e16d8000c9992a9489482c94fad2786c",
+      "entry_sha256": "30bccd96dc11fd875642f0ef3c0971e3c7ceaf3d38643c524bec07a8927b8b17"
     },
     {
       "name": "lark-calendar",
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-calendar",
-      "tree_oid": "95b3b893ca823ec42ad7557b10bd788333c65bf0",
-      "entry_sha256": "31f26bd7c91008edfc890d3693772a14066353ac5a2c8d6b5220bd47f495982c"
+      "tree_oid": "37b9b4d805ce6c5de09ad5249802ad8e53aa0dfb",
+      "entry_sha256": "d5d0ebd02b68d90e3bd8c1992a05696c3ad9900f4dcb2c86ff95edeac840355f"
     },
     {
       "name": "lark-doc",
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-doc",
-      "tree_oid": "423eafd31ccead70054cb24189491e93cb20af54",
-      "entry_sha256": "1c2aa910831a117b6ef4484469a3456775cef26a00beb8b38f470ee74654fb96"
+      "tree_oid": "a6f2ee981615fad22736ed2bdf1f0499cd8e3f93",
+      "entry_sha256": "2786f910370662069b1b52b98508033c84baaf0bd7b0bae177426ece4ceafacc"
     },
     {
       "name": "lark-drive",
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-drive",
-      "tree_oid": "b8378f1942cd7bc0e76c2824f29c2c8b97cc6b66",
+      "tree_oid": "931308731be0a17f72598d992ca5448d5f236c26",
       "entry_sha256": "b140cd55b62be7f001384fb47627dc269ef08db3b943d0eb8c6aa4ef1bc9b685"
     },
     {
@@ -142,15 +170,15 @@
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-im",
-      "tree_oid": "8fc75888ba97116d69453542e802ff8cf9d5f593",
-      "entry_sha256": "8d272993a64bd892c120da2bb8c1c11083b23aefa51d5e32f2f27e9a47519791"
+      "tree_oid": "6eb78611dfc16231baace52550829c32bb97582b",
+      "entry_sha256": "b880737bd5a6cfebf38a33493f3f37c492133d12e673016097a12a04dd7d2f9c"
     },
     {
       "name": "lark-shared",
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-shared",
-      "tree_oid": "1ee7e9dce1377a7038ab798e1ac5813ed608f4e1",
+      "tree_oid": "33e1e66a176020c65152e2315c22b721e9415ca9",
       "entry_sha256": "9fa68bb1f3ce564602c6df6c303ea4d2759de02442772f332fe5041d65720a1f"
     },
     {
@@ -158,7 +186,7 @@
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-task",
-      "tree_oid": "4c615021a475f71e431431b85d78af051d03505b",
+      "tree_oid": "0982de5204651192bb18a07404bdea41e18fd148",
       "entry_sha256": "f69e7f68432723240710a90ad390d97f777f5511868743d00a8478180a6a0d7a"
     },
     {
@@ -166,16 +194,16 @@
       "status": "reviewed",
       "repository": "larksuite/cli",
       "path": "skills/lark-wiki",
-      "tree_oid": "f414d0100e7afa397a1084a3a31f299b1ae5b7a3",
-      "entry_sha256": "d77b966ab246078b7ef050e4fbdf3f8dfa74ed76e03dab1e4f793c1a0a7bf2c2"
+      "tree_oid": "27af16b1989a7e34ab6c3be27c5344ab68a1b863",
+      "entry_sha256": "736cd467c6099df4f71398460417d0247ed54b50510c82ec18d82d02a128c684"
     },
     {
       "name": "learn",
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/learn",
-      "tree_oid": "afa0ddb1a3b917561b4aa16a7380f0b832608782",
-      "entry_sha256": "5998bb03432802b34f3d2a2c7eb43010d7cda9dbbabedf5344a4792284d3d06c"
+      "tree_oid": "7440b3e2ea865e9d9d2dd1386e97f73b731f8db6",
+      "entry_sha256": "5e46fb9f7725908a0bb937d5902f5b5d9ff3edbca82ad5b0fe14ecd59116f78b"
     },
     {
       "name": "obsidian-vault",
@@ -188,8 +216,8 @@
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/read",
-      "tree_oid": "13d86e01f828487bfb548979ef1ebebcd4c197f8",
-      "entry_sha256": "080faca57dcb145405e01918142e301cc04248cd1bfbd4fe44a9e827255d8a13"
+      "tree_oid": "2ad0970ce7abc3d3d48002f01026999a08cbe231",
+      "entry_sha256": "b44216816319912e6720b79c2ad8117c68a766d69abc385341ac2765f349928f"
     },
     {
       "name": "resolving-merge-conflicts",
@@ -198,6 +226,11 @@
       "path": "skills/engineering/resolving-merge-conflicts",
       "tree_oid": "77f0d7de3143abbf03e55a63522d30bff31ae908",
       "entry_sha256": "9d8114f8ef0b31f535a265fc05c364bd8cf2e2895a830040e06c22acb11f54b0"
+    },
+    {
+      "name": "show-me",
+      "status": "local",
+      "reason": "Existing local skill; no upstream source recorded."
     },
     {
       "name": "tdd",
@@ -212,8 +245,8 @@
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/think",
-      "tree_oid": "94ff3b3967da65b78fac5da42a3fc355383910b2",
-      "entry_sha256": "eac06d1b884bb825fe24dd62bca6ebdd3474b02cc1df67bcf21f71ade765ecfd"
+      "tree_oid": "09201d8a65401a5f48c926a010cf4670f3991319",
+      "entry_sha256": "5401b40e3910d4672c271a7a9cb6de6091f1c9e6d836b55a7ce0e0c162fb8122"
     },
     {
       "name": "to-tickets",
@@ -228,16 +261,16 @@
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/ui",
-      "tree_oid": "cdf9f63196aef6cb49342569ff5fe8edc5cc6187",
-      "entry_sha256": "5873cbafe60039c4e8043ccca2a5cfc933c7de7e9db20fbf485c28551523fb13"
+      "tree_oid": "55b8655a19cdf46fadf67dc68f1a74b38fd4666a",
+      "entry_sha256": "30ac6005c3563d43803c6c40e4ae0e1b35960a0bd9af0b3b388b73914ca8330a"
     },
     {
       "name": "write",
       "status": "reviewed",
       "repository": "tw93/Waza",
       "path": "skills/write",
-      "tree_oid": "615d8f39c927c8d6b7203c1c4ffb6e52548cc33f",
-      "entry_sha256": "d35ead1c5f70367277978da54b74375ec865798e446ad8be2a41fcb645cf638b"
+      "tree_oid": "33ca4d6fe5111855f66f9dcb72a680dcd627f1e4",
+      "entry_sha256": "b4843a2f9268a2959f8b29076fc259d948d6489e3fd0fdf4b265e85fd2a7e84f"
     }
   ]
 }

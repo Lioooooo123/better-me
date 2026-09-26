@@ -1,6 +1,6 @@
 ---
 name: lark-shared
-description: 处理 lark-cli 身份、登录、scope、输出格式、确认门禁和版本问题。用于明确飞书认证/配置或实际相关错误；正常业务命令不预先登录或扫描全部权限。
+description: 处理飞书 CLI 的认证、权限、输出契约或版本问题；正常业务命令无需预先加载。
 metadata:
   cli-baseline: "1.0.92"
 ---

@@ -2,6 +2,24 @@
   "version": 1,
   "skills": [
     {
+      "name": "better-ui",
+      "requires": [],
+      "companions": [
+        "ui"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "jakubkrehel/skills",
+        "original_folder_hash": "58e038d31d9fcb702d4ab1d40ebc32746dcf8a97f8d8dcde1fdd76a61e2907d3",
+        "modified": false,
+        "upstream": {
+          "repository": "jakubkrehel/skills",
+          "path": "skills/better-ui",
+          "reviewed_commit": "267330e1adfc66a718fb65fa6918c1f06d0a689e"
+        }
+      }
+    },
+    {
       "name": "check",
       "requires": [],
       "companions": [
@@ -18,7 +36,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/check",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     },
@@ -38,7 +56,7 @@
         "upstream": {
           "repository": "mattpocock/skills",
           "path": "skills/engineering/codebase-design",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+          "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
         }
       }
     },
@@ -57,7 +75,7 @@
         "upstream": {
           "repository": "mattpocock/skills",
           "path": "skills/engineering/domain-modeling",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+          "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
         }
       }
     },
@@ -92,7 +110,7 @@
         "upstream": {
           "repository": "mattpocock/skills",
           "path": "skills/productivity/handoff",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+          "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
         }
       }
     },
@@ -111,7 +129,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/health",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     },
@@ -150,7 +168,26 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/hunt",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
+        }
+      }
+    },
+    {
+      "name": "improve-react",
+      "requires": [],
+      "companions": [
+        "check",
+        "ui"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "millionco/react-doctor",
+        "original_folder_hash": "109d101882f7cc5ecf579124f1aced881613f0fdb611807f3d90da22204bdf8b",
+        "modified": true,
+        "upstream": {
+          "repository": "millionco/react-doctor",
+          "path": "skills/improve-react",
+          "reviewed_commit": "d741d58e7831e37c9f6a5528340c103059bd1ccf"
         }
       }
     },
@@ -168,7 +205,7 @@
         "upstream": {
           "repository": "wondelai/skills",
           "path": "ios-hig-design",
-          "reviewed_commit": "eade5d170b3a593c5b6ebcaca898102134aee108"
+          "reviewed_commit": "c172996495bed0fcd26896a9416b2093fd7073f0"
         }
       }
     },
@@ -189,7 +226,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-calendar",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -213,7 +250,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-doc",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -235,7 +272,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-drive",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -257,7 +294,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-im",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -273,7 +310,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-shared",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -295,7 +332,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-task",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -317,7 +354,7 @@
         "upstream": {
           "repository": "larksuite/cli",
           "path": "skills/lark-wiki",
-          "reviewed_commit": "7fd6ef3c07182257ce776cdc5a614e122d5bd4b3"
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
         }
       }
     },
@@ -337,7 +374,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/learn",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     },
@@ -372,7 +409,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/read",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     },
@@ -391,8 +428,19 @@
         "upstream": {
           "repository": "mattpocock/skills",
           "path": "skills/engineering/resolving-merge-conflicts",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+          "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
         }
+      }
+    },
+    {
+      "name": "show-me",
+      "requires": [],
+      "companions": [],
+      "explicit_only": false,
+      "provenance": {
+        "source": "local; origin not recorded",
+        "original_folder_hash": "a78b467b9e127bfe5e6f9913bd56764376a968a265942ae4d065e50056727360",
+        "modified": false
       }
     },
     {
@@ -411,7 +459,7 @@
         "upstream": {
           "repository": "mattpocock/skills",
           "path": "skills/engineering/tdd",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+          "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
         }
       }
     },
@@ -433,7 +481,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/think",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     },
@@ -452,7 +500,7 @@
         "upstream": {
           "repository": "mattpocock/skills",
           "path": "skills/engineering/to-tickets",
-          "reviewed_commit": "3cca18b368ae95cdbdebbff572ccafa662551015"
+          "reviewed_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7"
         }
       }
     },
@@ -470,7 +518,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/ui",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     },
@@ -492,7 +540,7 @@
         "upstream": {
           "repository": "tw93/Waza",
           "path": "skills/write",
-          "reviewed_commit": "2ae9e487a97bc101ca23b7f5a8fd3389c1ecffe2"
+          "reviewed_commit": "c3b74dd5845b39a80a79c36bb82b028947674a05"
         }
       }
     }

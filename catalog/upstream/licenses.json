@@ -35,5 +35,17 @@
     "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/LICENSE.txt",
     "scope": "gh-fix-ci",
     "modified": true
+  },
+  {
+    "repo": "jakubkrehel/skills",
+    "license": "MIT",
+    "url": "https://github.com/jakubkrehel/skills/blob/267330e1adfc66a718fb65fa6918c1f06d0a689e/LICENSE",
+    "blob_sha": "6a067e906e1346e640a0cda6ed37c5fb793104e4"
+  },
+  {
+    "repo": "millionco/react-doctor",
+    "license": "Modified MIT",
+    "url": "https://github.com/millionco/react-doctor/blob/d741d58e7831e37c9f6a5528340c103059bd1ccf/LICENSE",
+    "blob_sha": "aef05f70226ae35a14de6643fc0dff0ea62e1efe"
   }
 ]

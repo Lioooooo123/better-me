@@ -1,6 +1,6 @@
 # task +tasklist-search
 
-> **Prerequisites:** Please read `../lark-shared/SKILL.md` to understand authentication, global parameters, and security rules.
+> For unresolved authentication, permission, or global-argument questions, consult [lark-shared](../../lark-shared/SKILL.md). Reuse verified session context.
 >
 > **⚠️ Note:** This shortcut uses tasklist search followed by tasklist detail queries to render the final output.
 

@@ -1,6 +1,6 @@
 # task +get-related-tasks
 
-> **Prerequisites:** Please read `../lark-shared/SKILL.md` to understand authentication, global parameters, and security rules.
+> For unresolved authentication, permission, or global-argument questions, consult [lark-shared](../../lark-shared/SKILL.md). Reuse verified session context.
 >
 > **⚠️ Note:** This API must be called with a user identity. **Do NOT use an app identity, otherwise the call will fail.**
 >

@@ -166,6 +166,45 @@
         "不把推测改写为已修复"
       ],
       "execution_status": "not_run"
+    },
+    {
+      "id": "review-no-subagents",
+      "prompt": "全面审查这个分支，包括高风险调用链和迁移遗漏",
+      "relevant_skills": [
+        "check"
+      ],
+      "acceptance": [
+        "由当前 Agent 完成，不因全面或高风险启动子 Agent",
+        "不主动询问是否允许委派",
+        "给出来源支持的发现与实际验证范围"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "review-explicit-subagents",
+      "prompt": "审查这个分支，明确开两个 subagent 分别检查两个独立模块",
+      "relevant_skills": [
+        "check"
+      ],
+      "acceptance": [
+        "仅在运行时允许时按用户明确要求委派",
+        "给每项明确输入、输出和完成标准",
+        "当前 Agent 核实并整合证据"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "personal-skills-only",
+      "prompt": "按文章优化所有个人 skill，插件不改",
+      "relevant_skills": [
+        "health"
+      ],
+      "acceptance": [
+        "解析个人安装链接并修改个人源码",
+        "不修改系统技能和插件缓存",
+        "仅加载与具体问题有关的参考资料"
+      ],
+      "execution_status": "not_run"
     }
   ]
 }

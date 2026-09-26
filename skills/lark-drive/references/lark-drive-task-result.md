@@ -1,7 +1,7 @@
 
 # drive +task_result
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> 认证、权限或全局参数存在疑问时，按需阅读 [lark-shared](../../lark-shared/SKILL.md)，复用已确认的身份与契约。
 
 查询异步任务结果。该 shortcut 聚合了导入、导出、Drive 文件/文件夹移动/删除、Wiki 节点 / 文档迁入 Wiki、Wiki 节点移出 Wiki、Wiki 删除等多种异步任务的结果查询，统一接口方便调用。
 

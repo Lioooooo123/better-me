@@ -1,7 +1,7 @@
 
 # docs +media-download（下载文档素材/画板缩略图）
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> 认证、权限或全局参数存在疑问时，按需阅读 [lark-shared](../../lark-shared/SKILL.md)，复用已确认的身份与契约。
 
 下载文档中的图片/文件素材（`file_token`），或下载画板缩略图（`whiteboard_id`）。当 `--output` 不带扩展名时，会根据响应的 `Content-Type` 自动补全扩展名。
 

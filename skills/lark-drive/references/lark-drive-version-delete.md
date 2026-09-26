@@ -1,6 +1,6 @@
 # drive +version-delete
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> 认证、权限或全局参数存在疑问时，按需阅读 [lark-shared](../../lark-shared/SKILL.md)，复用已确认的身份与契约。
 
 删除指定的历史版本。该 shortcut 同时支持 `--as user` 和 `--as bot`；自动化场景推荐使用 `--as bot`。
 

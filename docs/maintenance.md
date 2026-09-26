@@ -9,11 +9,11 @@
 - [React 技能维护说明](https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/README.md) 将规则分文件编写，附正确和错误示例，再构建汇编与测试素材。对应 CI 执行 validate 和 build。
 - [发现索引工作流](https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/.github/workflows/agent-skills-discovery.yml) 校验索引，并在 push 后发布 release 附件。
 
-## Praxis 的落实
+## better-me 的落实
 
-| 机制 | Praxis 做法 |
+| 机制 | better-me 做法 |
 |---|---|
-| 内容与工具分工 | 保留 `skills/` 与 `scripts/`，25 个技能暂不拆仓库 |
+| 内容与工具分工 | 保留 `skills/` 与 `scripts/`，28 个技能暂不拆仓库 |
 | 技能级更新判断 | `make upstream` 查询固定 commit 的目录树，与已审阅树指纹比较；错误不伪装成未变化 |
 | 明确维护方法 | `CONTRIBUTING.md` 说明新增、更新、许可、验证和交付；PR 模板收集本次变化的证据 |
 | 本地与 CI 一致 | `make check` 统一元数据检查和脚本测试；网络上游检查单独运行 |

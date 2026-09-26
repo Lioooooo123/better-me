@@ -1,6 +1,6 @@
 ---
 name: lark-doc
-description: 读取、创建和编辑飞书云文档正文。用于 docx/wiki 文档内容、摘要和写作发布；按名称找文件用 lark-drive，知识库结构用 lark-wiki。
+description: 读取或编辑飞书云文档正文，包括 Wiki 节点的底层文档；本地 Word 文件不触发。
 metadata:
   cli-baseline: "1.0.92"
 ---

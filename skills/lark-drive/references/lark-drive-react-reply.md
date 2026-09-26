@@ -1,6 +1,6 @@
 # drive +react-reply
 
-> **前置条件：** 先阅读 [`../../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和权限处理。reaction 查询规则、语义联想与完整 `reaction_type` 枚举见跨切面专题 [`lark-drive-reactions.md`](lark-drive-reactions.md)。
+> 认证、权限或全局参数存在疑问时，按需阅读 [lark-shared](../../lark-shared/SKILL.md)，复用已确认的身份与契约。reaction 查询规则、语义联想与完整 `reaction_type` 枚举见跨切面专题 [`lark-drive-reactions.md`](lark-drive-reactions.md)。
 
 给一条回复添加或删除表情回应（reaction）。操作对象始终是 `reply_id`。
 

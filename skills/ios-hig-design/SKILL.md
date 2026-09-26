@@ -1,6 +1,6 @@
 ---
 name: ios-hig-design
-description: 设计或审查 iOS/iPadOS 的原生体验、导航、safe area、Dynamic Type、VoiceOver 和自适应布局。用于明确平台体验工作；纯 Swift 逻辑问题不触发。
+description: 设计或审查 iOS/iPadOS 的导航、布局和无障碍体验；纯 Swift 逻辑不触发。
 license: MIT
 metadata:
   author: wondelai

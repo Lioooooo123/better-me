@@ -1,6 +1,6 @@
 # task +complete
 
-> **Prerequisites:** Please read `../lark-shared/SKILL.md` to understand authentication, global parameters, and security rules.
+> For unresolved authentication, permission, or global-argument questions, consult [lark-shared](../../lark-shared/SKILL.md). Reuse verified session context.
 
 Mark a task as completed.
 
@@ -28,4 +28,4 @@ lark-cli task +complete --task-id "https://applink.larksuite.com/client/todo/tas
 4. Do not routinely call `task tasks get` when the result already reports `status: done` and a non-zero `completed_at`. Query details only if confirmation fields are absent or the user explicitly asks for a full verification.
 
 > [!CAUTION]
-> This is a **Write Operation** -- You must confirm the user's intent before executing.
+> Write only within the user’s explicit authorization for this target and operation. Reuse authorization already given in this task; ask only if the target, content, or requested action is unresolved.

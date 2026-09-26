@@ -1,6 +1,6 @@
 ---
 name: lark-calendar
-description: 查询和安排飞书日程、忙闲、参会人与会议室。用于明确时间安排；会议逐字稿不属于此技能，普通 Codex 提醒使用宿主调度工具。
+description: 查询和安排飞书日程、忙闲与会议室；普通 Codex 提醒使用宿主调度工具。
 metadata:
   cli-baseline: "1.0.92"
 ---

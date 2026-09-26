@@ -1,6 +1,6 @@
 # task +create
 
-> **Prerequisites:** Please read `../lark-shared/SKILL.md` to understand authentication, global parameters, and security rules.
+> For unresolved authentication, permission, or global-argument questions, consult [lark-shared](../../lark-shared/SKILL.md). Reuse verified session context.
 
 Create a new task in Lark.
 
@@ -73,7 +73,7 @@ Example success response:
 ```
 
 > [!CAUTION]
-> This is a **Write Operation** -- You must confirm the user's intent before executing.
+> Write only within the user’s explicit authorization for this target and operation. Reuse authorization already given in this task; ask only if the target, content, or requested action is unresolved.
 
 ## References
 

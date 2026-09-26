@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def fetch_tree(repository, commit):
-    headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'praxis-upstream-check'}
+    headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'better-me-upstream-check'}
     with urlopen(Request(f'https://api.github.com/repos/{repository}/git/commits/{commit}',
                          headers=headers), timeout=30) as response:
         root_tree = json.load(response)['tree']['sha']

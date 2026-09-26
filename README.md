@@ -1,11 +1,11 @@
-# Praxis · 知行
+# better-me
 
-把方法用于实际工作。个人编码与工作技能源码。25 个技能按实际任务组合，共享已有材料、决定与验证结果；小任务直接完成，不必跑固定流水线。
+把方法用于实际工作。个人编码与工作技能源码。当前维护 28 个技能，均来自本机 `~/.agents/skills/`；按实际任务组合，共享已有材料、决定与验证结果。小任务直接完成，不必跑固定流水线。
 
 | 工作 | 技能 |
 |---|---|
-| 编码与设计 | think、hunt、check、tdd、codebase-design、domain-modeling、ui、ios-hig-design |
-| 研究与表达 | read、learn、write、obsidian-vault |
+| 编码与设计 | think、hunt、check、tdd、codebase-design、domain-modeling、ui、better-ui、improve-react、ios-hig-design |
+| 研究与表达 | read、learn、write、show-me、obsidian-vault |
 | 求职交付 | html-resume-builder |
 | 维护与交接 | health、handoff、to-tickets、gh-fix-ci、resolving-merge-conflicts |
 | 飞书 | lark-shared、lark-doc、lark-drive、lark-wiki、lark-im、lark-calendar、lark-task |
@@ -18,6 +18,8 @@
 - “比较三篇文章，把结论存进笔记库”：`read → learn → obsidian-vault`，复用来源和正文。
 - “根据已有经历制作岗位简历 PDF”：`write → html-resume-builder`，传递真实事实和既有删减授权。
 - “找到飞书文档并整理内容”：`lark-drive → lark-doc`；实际调整知识库节点时才加入 `lark-wiki`。
+- “审查 React 代码的可维护性”：`improve-react`；拿到诊断结果后，按实际缺陷决定是否修改。
+- “把当前流程画清楚”：`show-me`；界面实现和视觉打磨分别使用 `ui`、`better-ui`。
 
 箭头是可选阶段衔接；只执行目标所需部分。发送消息、发布和外部任务创建按用户已授权的具体范围执行。
 
@@ -33,7 +35,7 @@ python3 scripts/manage.py rollback         # 预览恢复
 python3 scripts/manage.py rollback --apply
 ```
 
-默认安装到 `~/.agents/skills/`，备份与迁移日志在 `~/.codex/skill-hub/`。可用 `--home <directory>` 隔离验证。首次迁移只替换已记录且整棵目录指纹一致的原技能，遇到未知或已修改内容就停止。系统技能和插件缓存不在范围内。锁文件只更新本仓库管理的条目；恢复前检查冲突，并保留无关条目的后续修改。
+默认安装到 `~/.agents/skills/`，备份与迁移日志在 `~/.codex/skill-hub/`。可用 `--home <directory>` 隔离验证。首次迁移只替换已记录且整棵目录指纹一致的原技能；后续新增技能也须与现有目录指纹一致，才能接管为仓库链接。遇到未知或已修改内容就停止。系统技能和插件缓存不在范围内。锁文件只更新本仓库管理的条目；恢复前检查冲突，并保留无关条目的后续修改。
 
 原 24 个飞书技能保留 7 个，另 17 个退出默认安装。少用服务的显式需求优先查询已有 CLI，见[扩展服务说明](skills/lark-shared/references/optional-services.md)，不会自动恢复整套技能。
 
@@ -60,17 +62,15 @@ make check PYTHON=.venv/bin/python
 make upstream
 ```
 
-只读检查 6 个上游仓库，并按技能目录树指纹区分 `unchanged`、`skill_changed`、`path_missing` 和 `error`。`repository_changed` 仅表示分支有变化，不代表技能更新。查询失败或响应被截断会返回错误，不能当成没有更新。基础分支检查仍可用 `python3 scripts/check_upstream.py`。
+只读检查 8 个上游仓库，并按技能目录树指纹区分 `unchanged`、`skill_changed`、`path_missing` 和 `error`。`repository_changed` 仅表示分支有变化，不代表技能更新。查询失败或响应被截断会返回错误，不能当成没有更新。基础分支检查仍可用 `python3 scripts/check_upstream.py`。
 
 检查固定到本次解析的 commit，不安装、覆盖技能或推进[审阅基线](catalog/upstream-state.json)。本地有改写，发现更新后仍需选择性合入并验证；该文件不是本地等同于上游的安装锁。
 
-24 个技能已核实上游路径；`obsidian-vault` 暂未在其登记来源的当前快照中找到，保留本地版本。官方系统和插件缓存仍由上游安装机制管理。
+26 个技能已核实上游路径；`obsidian-vault` 暂未在其登记来源的当前快照中找到，`show-me` 的本机来源记录缺失，均保留本地版本。官方系统和插件缓存仍由上游安装机制管理。
 
-[2026-09-07 更新记录](docs/upstream-review-2026-09-07.md)列出本次采纳、跳过和实际验证。
+[2026-09-26 更新记录](docs/upstream-review-2026-09-26.md)列出本次采纳、暂缓和实际验证；[2026-09-07 更新记录](docs/upstream-review-2026-09-07.md)保留历史审阅。
 
-已按用户要求移除 skill-hub、setup-pre-commit、asu-skills 三个入口。仓库仍用于维护其他技能，移除入口不影响它们独立使用。本机 Figma 插件已卸载，Google Drive 插件已停用。历史审计与更新记录保留当时范围。
-
-新增 gh-fix-ci 和 resolving-merge-conflicts：分别处理 GitHub Actions 失败与正在进行的 Git 冲突。没有重建总入口。仓库与本机源码目录改名为 praxis；历史备份继续使用 ~/.codex/skill-hub/，避免破坏已有恢复记录。
+此前已移除 skill-hub、setup-pre-commit、asu-skills 三个入口；历史审计保留当时范围。仓库与本机源码目录现为 better-me；历史备份继续使用 `~/.codex/skill-hub/`，保持恢复记录可用。
 
 [命名与候选筛选记录](docs/praxis-curation.md)记录新增原因、暂不纳入的候选及验证范围。
 

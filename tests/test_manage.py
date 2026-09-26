@@ -92,6 +92,45 @@ class InstallationTests(unittest.TestCase):
             hub.rollback(self.home, True)
         self.assertTrue((self.home / '.agents/skills/keep').is_symlink())
 
+    def test_extend_install_adopts_matching_skill_and_restores_original(self):
+        hub.install(self.home, True, self.root)
+        added = self.root / 'skills/addon'
+        added.mkdir()
+        (added / 'SKILL.md').write_text('new addon')
+        original = self.home / '.agents/skills/addon'
+        original.mkdir()
+        (original / 'SKILL.md').write_text('new addon')
+        catalog = json.loads((self.root / 'catalog/skills.json').read_text())
+        catalog['skills'].append({'name': 'addon'})
+        hub.save(self.root / 'catalog/skills.json', catalog)
+        lock = json.loads(self.lock.read_text())
+        lock['skills']['addon'] = {'source': 'upstream'}
+        hub.save(self.lock, lock)
+
+        self.assertEqual(hub.install(self.home, root=self.root)['status'], 'dry-run')
+        result = hub.install(self.home, True, self.root)
+        self.assertEqual(result['added'], 1)
+        self.assertEqual(original.resolve(), added.resolve())
+        self.assertEqual(hub.install(self.home, True, self.root)['status'], 'already-installed')
+        hub.rollback(self.home, True)
+        self.assertFalse(original.is_symlink())
+        self.assertEqual((original / 'SKILL.md').read_text(), 'new addon')
+        self.assertEqual(json.loads(self.lock.read_text())['skills']['addon'], {'source': 'upstream'})
+
+    def test_extend_install_rejects_changed_skill(self):
+        hub.install(self.home, True, self.root)
+        added = self.root / 'skills/addon'
+        added.mkdir()
+        (added / 'SKILL.md').write_text('new addon')
+        original = self.home / '.agents/skills/addon'
+        original.mkdir()
+        (original / 'SKILL.md').write_text('local edits')
+        hub.save(self.root / 'catalog/skills.json', {'skills': [{'name': 'keep'}, {'name': 'addon'}]})
+        with self.assertRaisesRegex(ValueError, 'changed skill'):
+            hub.install(self.home, True, self.root)
+        self.assertFalse(original.is_symlink())
+        self.assertEqual((original / 'SKILL.md').read_text(), 'local edits')
+
     def test_state_directory_symlink_rejected(self):
         outside = Path(self.temp.name) / 'outside'
         outside.mkdir()

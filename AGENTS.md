@@ -1,4 +1,4 @@
-# Praxis 维护约定
+# better-me 维护约定
 
 本仓库是个人 Codex 技能的源码；`catalog/skills.json` 决定默认安装集合与依赖，`catalog/migration-baseline.json` 记录首次迁移范围。系统技能和插件缓存由上游维护。
 
