@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "name": "better-ui",
+      "parent": "ui",
+      "path": "skills/ui/modules/better-ui",
+      "requires": [],
+      "companions": [
+        "ui"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "jakubkrehel/skills",
+        "original_folder_hash": "58e038d31d9fcb702d4ab1d40ebc32746dcf8a97f8d8dcde1fdd76a61e2907d3",
+        "modified": true,
+        "upstream": {
+          "repository": "jakubkrehel/skills",
+          "path": "skills/better-ui",
+          "reviewed_commit": "267330e1adfc66a718fb65fa6918c1f06d0a689e"
+        }
+      }
+    },
+    {
+      "name": "improve-react",
+      "parent": "check",
+      "path": "skills/check/modules/improve-react",
+      "requires": [],
+      "companions": [
+        "check",
+        "ui"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "millionco/react-doctor",
+        "original_folder_hash": "109d101882f7cc5ecf579124f1aced881613f0fdb611807f3d90da22204bdf8b",
+        "modified": true,
+        "upstream": {
+          "repository": "millionco/react-doctor",
+          "path": "skills/improve-react",
+          "reviewed_commit": "d741d58e7831e37c9f6a5528340c103059bd1ccf"
+        }
+      }
+    },
+    {
+      "name": "ios-hig-design",
+      "parent": "ui",
+      "path": "skills/ui/modules/ios-hig-design",
+      "requires": [],
+      "companions": [
+        "ui"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "local; original author wondelai",
+        "original_folder_hash": null,
+        "modified": true,
+        "upstream": {
+          "repository": "wondelai/skills",
+          "path": "ios-hig-design",
+          "reviewed_commit": "c172996495bed0fcd26896a9416b2093fd7073f0"
+        }
+      }
+    },
+    {
+      "name": "lark-calendar",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-calendar",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-shared",
+        "lark-task"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-calendar",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    },
+    {
+      "name": "lark-doc",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-doc",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-drive",
+        "lark-shared",
+        "lark-wiki",
+        "learn",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-doc",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    },
+    {
+      "name": "lark-drive",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-drive",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-doc",
+        "lark-shared",
+        "lark-wiki"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-drive",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    },
+    {
+      "name": "lark-im",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-im",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-doc",
+        "lark-shared",
+        "write"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-im",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    },
+    {
+      "name": "lark-shared",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-shared",
+      "requires": [],
+      "companions": [],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-shared",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    },
+    {
+      "name": "lark-task",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-task",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-calendar",
+        "lark-shared",
+        "to-tickets"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-task",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    },
+    {
+      "name": "lark-wiki",
+      "parent": "lark",
+      "path": "skills/lark/modules/lark-wiki",
+      "requires": [
+        "lark-shared"
+      ],
+      "companions": [
+        "lark-doc",
+        "lark-drive",
+        "lark-shared"
+      ],
+      "explicit_only": false,
+      "provenance": {
+        "source": "open.feishu.cn",
+        "original_folder_hash": "",
+        "modified": true,
+        "upstream": {
+          "repository": "larksuite/cli",
+          "path": "skills/lark-wiki",
+          "reviewed_commit": "a079fd7a0f2e5f91ef2a45017175ac9b7435ee97"
+        }
+      }
+    }
+  ]
+}

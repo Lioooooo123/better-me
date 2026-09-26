@@ -77,13 +77,18 @@ def plan(home, root=ROOT):
 
 
 def extension_plan(home, journal, root=ROOT):
-    """Adopt new catalog skills without replacing an existing managed link."""
+    """Reconcile managed links with the installed catalog, preserving prior backups."""
     catalog = json.loads((root / 'catalog/skills.json').read_text())['skills']
     installed = set(journal['new_entries'])
     names = {item['name'] for item in catalog}
-    if not installed <= names:
-        raise ValueError('Catalog removed an installed skill; rollback or migrate it explicitly')
     actions = []
+    for name in sorted(installed - names):
+        path = safe_path(home, f'.agents/skills/{name}')
+        previous_target = str(root / 'skills' / name)
+        if not path.is_symlink() or os.readlink(path) != previous_target:
+            raise ValueError(f'Managed skill changed; untouched: {path}')
+        actions.append({'path': f'.agents/skills/{name}', 'target': None,
+                        'previous_target': previous_target})
     for item in catalog:
         name = item['name']
         path = safe_path(home, f'.agents/skills/{name}')
@@ -92,11 +97,16 @@ def extension_plan(home, journal, root=ROOT):
             if not path.is_symlink() or os.readlink(path) != target:
                 raise ValueError(f'Managed skill changed; untouched: {path}')
             continue
+        previous = next((action for action in journal['actions']
+                         if action['path'] == f'.agents/skills/{name}' and action['target']), None)
         present = exists(path)
+        if previous and (present or previous['target'] != target):
+            raise ValueError(f'Cannot reactivate changed skill; untouched: {path}')
         if present and (not path.is_dir() or path.is_symlink() or fingerprint(path) != fingerprint(root / 'skills' / name)):
             raise ValueError(f'Unrecognized or changed skill; untouched: {path}')
         actions.append({'path': f'.agents/skills/{name}', 'target': target,
-                        'had_original': present, 'before_hash': fingerprint(path) if present else None})
+                        'had_original': present, 'before_hash': fingerprint(path) if present else None,
+                        'reactivate': bool(previous)})
     return actions, catalog
 
 
@@ -113,13 +123,19 @@ def extend_install(home, state, journal, actions, catalog, root):
     if not backup.is_relative_to(safe_path(home, '.codex/skill-hub/backups')):
         raise ValueError('Invalid backup location')
     for action in actions:
-        if exists(backup / action['path']):
+        if action['target'] and not action['reactivate'] and exists(backup / action['path']):
             raise ValueError(f'Backup already exists: {action["path"]}')
     original_state = state.read_text()
     moved = []
     try:
         for action in actions:
             path = safe_path(home, action['path'])
+            if action['target'] is None:
+                if not path.is_symlink() or os.readlink(path) != action['previous_target']:
+                    raise ValueError(f'Concurrent change: {path}')
+                path.unlink()
+                moved.append(action)
+                continue
             if exists(path) != action['had_original'] or (action['had_original'] and fingerprint(path) != action['before_hash']):
                 raise ValueError(f'Concurrent change: {path}')
             dest = backup / action['path']
@@ -134,10 +150,14 @@ def extend_install(home, state, journal, actions, catalog, root):
         additions = {item['name']: {'source': 'Lioooooo123/better-me', 'sourceType': 'local',
                      'sourceUrl': str(root), 'skillPath': f'skills/{item["name"]}/SKILL.md'}
                      for item in catalog if item['name'] not in journal['new_entries']}
+        removals = {Path(action['path']).name for action in actions if action['target'] is None}
         for name in additions:
             if name in lock_data['skills']:
                 journal['old_entries'][name] = lock_data['skills'][name]
-        journal['actions'].extend(actions)
+        journal['actions'].extend(action for action in actions if action['target'] and not action['reactivate'])
+        for name in removals:
+            journal['new_entries'].pop(name)
+            lock_data['skills'].pop(name, None)
         journal['new_entries'].update(additions)
         journal['managed_names'] = sorted(set(journal['managed_names']) | set(additions))
         lock_data['skills'].update(additions)
@@ -151,13 +171,18 @@ def extend_install(home, state, journal, actions, catalog, root):
         state.write_text(original_state)
         for action in reversed(moved):
             path = safe_path(home, action['path'])
+            if action['target'] is None:
+                if not exists(path):
+                    path.symlink_to(action['previous_target'], target_is_directory=True)
+                continue
             if path.is_symlink() and os.readlink(path) == action['target']:
                 path.unlink()
             saved = backup / action['path']
             if exists(saved):
                 saved.rename(path)
         raise
-    return {'status': 'installed', 'count': len(catalog), 'added': len(actions), 'backup': str(backup)}
+    return {'status': 'installed', 'count': len(catalog), 'added': len(additions),
+            'retired': len(removals), 'backup': str(backup)}
 
 
 def install(home, apply=False, root=ROOT):

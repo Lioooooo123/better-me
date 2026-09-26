@@ -205,6 +205,39 @@
         "仅加载与具体问题有关的参考资料"
       ],
       "execution_status": "not_run"
+    },
+    {
+      "id": "lark-doc-progressive",
+      "prompt": "读取这篇飞书文档并概括正文",
+      "relevant_skills": ["lark"],
+      "acceptance": [
+        "先读取 lark 入口和文档模块，不预读消息、日程、任务和 Wiki 模块",
+        "只按读取任务再打开 fetch 等相关参考",
+        "认证或 token 疑问出现时才读取 shared 模块"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "ui-polish-progressive",
+      "prompt": "精修这个页面的圆角和图标对齐",
+      "relevant_skills": ["ui"],
+      "acceptance": [
+        "只按当前问题读取 UI 细节模块的 surfaces 和 icons 参考",
+        "不预读 iOS 设计与无关动效配方",
+        "沿用项目已有组件与设计 token"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "react-audit-progressive",
+      "prompt": "审查这个 React 页面频繁重渲染的问题",
+      "relevant_skills": ["check"],
+      "acceptance": [
+        "按需读取 React 模块和性能类别参考，不预读其他四类与计划模板",
+        "扫描结果须在代码和执行频率中核实",
+        "未要求修复或计划时保持只读"
+      ],
+      "execution_status": "not_run"
     }
   ]
 }

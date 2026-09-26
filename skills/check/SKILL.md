@@ -19,4 +19,6 @@ description: 审查代码改动、PR 或分支中的缺陷与迁移遗漏；具�
 
 源码验证、已安装行为和发布完成分别报告；只有要求发布时才检查发布资产与安装渠道。
 
+React 项目要求性能或可维护性专项审查时，读取 [React 审查模块](modules/improve-react/MODULE.md)；普通代码审查不预读 React Doctor 的规则和计划模板。
+
 联动：CI 失败调查用 `gh-fix-ci`，正在进行的合并冲突用 `resolving-merge-conflicts`；根因尚不明确用 `hunt`；明确模块问题用 `codebase-design`。对方已提供可靠检查结果时复用，只有新改动或证据疑点才重跑。

@@ -12,11 +12,25 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def validate(root=ROOT):
     errors = []
-    items = json.loads((root / 'catalog/skills.json').read_text())['skills']
+    installed = json.loads((root / 'catalog/skills.json').read_text())['skills']
+    modules = json.loads((root / 'catalog/modules.json').read_text())['modules']
+    items = installed + modules
     names = {item['name'] for item in items}
+    installed_names = {item['name'] for item in installed}
     actual = {p.parent.name for p in (root / 'skills').glob('*/SKILL.md')}
-    if len(names) != len(items) or names != actual:
-        errors.append('Catalog and skill directories differ or contain duplicates')
+    actual_modules = {str(p.parent.relative_to(root)) for p in (root / 'skills').glob('*/modules/*/MODULE.md')}
+    nested_manifests = [p for p in (root / 'skills').glob('**/SKILL.md')
+                        if len(p.relative_to(root / 'skills').parts) > 2]
+    listed_modules = {item['path'] for item in modules}
+    if len(names) != len(items) or installed_names != actual:
+        errors.append('Installed catalog and top-level skill directories differ or contain duplicates')
+    if listed_modules != actual_modules or len(listed_modules) != len(modules):
+        errors.append('Module catalog and module directories differ or contain duplicates')
+    if nested_manifests:
+        errors.append('Nested modules must use MODULE.md, not SKILL.md')
+    for item in modules:
+        if item['parent'] not in installed_names or item['path'] != f'skills/{item["parent"]}/modules/{item["name"]}':
+            errors.append(f'Invalid module location: {item["name"]}')
     upstream = json.loads((root / 'catalog/upstream-state.json').read_text())
     repositories = {item['repository']: item for item in upstream['repositories']}
     tracked = upstream['skills']
@@ -33,8 +47,8 @@ def validate(root=ROOT):
                 errors.append(f'Invalid upstream fingerprint: {item["name"]}')
     for item in items:
         name = item['name']
-        base = root / 'skills' / name
-        entry = base / 'SKILL.md'
+        base = root / item.get('path', f'skills/{name}')
+        entry = base / ('SKILL.md' if name in installed_names else 'MODULE.md')
         text = entry.read_text()
         try:
             if not text.startswith('---\n'):
@@ -57,6 +71,8 @@ def validate(root=ROOT):
         for dependency in item['requires'] + item['companions']:
             if dependency not in names:
                 errors.append(f'{name}: unknown dependency {dependency}')
+            elif name in installed_names and dependency not in installed_names:
+                errors.append(f'{name}: installed skill points to an uninstalled module {dependency}')
         for doc in base.rglob('*.md'):
             # Fenced examples are not repository references.
             content = re.sub(r'^```[^\n]*\n.*?^```[ \t]*$', '', doc.read_text(), flags=re.S | re.M)

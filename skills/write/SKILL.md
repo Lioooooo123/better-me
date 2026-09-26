@@ -17,4 +17,4 @@ description: 起草、改写、润色、翻译中英文文字，适配受众和�
 - 中英翻译、双语术语或产品本地化：[翻译与本地化](references/localization.md)。
 - 批量文件需要统一字符级标点时，可运行 `bash scripts/check-punctuation.sh --lang zh <file>` 或 `--lang en`；短消息直接校对，不为了仪式调用脚本。脚本结果结合引文、用户格式和语言判断，不盲目替换。
 
-联动：缺事实时使用 `read`/`learn`；生成简历文件用 `html-resume-builder`。用户要求发布到飞书时，把确认后的成稿交给 `lark-doc` 或 `lark-im`；起草授权本身不等于发送授权。
+联动：缺事实时使用 `read`/`learn`；生成简历文件用 `html-resume-builder`。用户要求发布到飞书时，使用 `lark` 的文档或消息模块；起草授权本身不等于发送授权。

@@ -131,6 +131,41 @@ class InstallationTests(unittest.TestCase):
         self.assertFalse(original.is_symlink())
         self.assertEqual((original / 'SKILL.md').read_text(), 'local edits')
 
+    def test_retire_and_reactivate_managed_skill_without_losing_backup(self):
+        result = hub.install(self.home, True, self.root)
+        original_backup = Path(result['backup']) / '.agents/skills/keep/SKILL.md'
+        hub.save(self.root / 'catalog/skills.json', {'skills': []})
+        preview = hub.install(self.home, root=self.root)
+        self.assertEqual(preview['actions'][0]['target'], None)
+        self.assertEqual(hub.install(self.home, True, self.root)['retired'], 1)
+        self.assertFalse((self.home / '.agents/skills/keep').exists())
+        self.assertEqual(original_backup.read_text(), 'original keep')
+        self.assertNotIn('keep', json.loads(self.lock.read_text())['skills'])
+
+        hub.save(self.root / 'catalog/skills.json', {'skills': [{'name': 'keep'}]})
+        self.assertEqual(hub.install(self.home, True, self.root)['added'], 1)
+        self.assertTrue((self.home / '.agents/skills/keep').is_symlink())
+        hub.rollback(self.home, True)
+        self.assertEqual((self.home / '.agents/skills/keep/SKILL.md').read_text(), 'original keep')
+        self.assertEqual(json.loads(self.lock.read_text())['skills']['keep'], {'source': 'old'})
+
+    def test_reconcile_failure_restores_retired_link_and_lock(self):
+        hub.install(self.home, True, self.root)
+        (self.root / 'skills/addon').mkdir()
+        (self.root / 'skills/addon/SKILL.md').write_text('addon')
+        hub.save(self.root / 'catalog/skills.json', {'skills': [{'name': 'addon'}]})
+        before_lock = self.lock.read_text()
+        original_symlink_to = Path.symlink_to
+        def fail_addon(path, target, **kwargs):
+            if path.name == 'addon':
+                raise OSError('injected failure')
+            return original_symlink_to(path, target, **kwargs)
+        with patch.object(Path, 'symlink_to', fail_addon):
+            with self.assertRaisesRegex(OSError, 'injected failure'):
+                hub.install(self.home, True, self.root)
+        self.assertTrue((self.home / '.agents/skills/keep').is_symlink())
+        self.assertEqual(self.lock.read_text(), before_lock)
+
     def test_state_directory_symlink_rejected(self):
         outside = Path(self.temp.name) / 'outside'
         outside.mkdir()

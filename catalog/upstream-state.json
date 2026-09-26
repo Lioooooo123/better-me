@@ -142,6 +142,11 @@
       "entry_sha256": "30bccd96dc11fd875642f0ef3c0971e3c7ceaf3d38643c524bec07a8927b8b17"
     },
     {
+      "name": "lark",
+      "status": "local",
+      "reason": "Curated router over seven retained Lark modules."
+    },
+    {
       "name": "lark-calendar",
       "status": "reviewed",
       "repository": "larksuite/cli",
