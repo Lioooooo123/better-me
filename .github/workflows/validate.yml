@@ -1,4 +1,4 @@
-name: Validate Praxis
+name: Validate better-me
 on: [push, pull_request]
 permissions:
   contents: read
