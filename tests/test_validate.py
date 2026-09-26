@@ -25,10 +25,26 @@ class ModuleValidationTests(unittest.TestCase):
                  'requires': [], 'companions': [], 'explicit_only': False}]}))
             (root / 'catalog/upstream-state.json').write_text(json.dumps({'repositories': [], 'skills': [
                 {'name': 'lark', 'status': 'local'}, {'name': 'lark-doc', 'status': 'local'}]}))
+            (root / 'evals').mkdir()
+            (root / 'evals/scenarios.json').write_text(json.dumps({'cases': [{
+                'id': 'read-doc', 'prompt': '读取飞书文档', 'relevant_skills': ['lark'],
+                'expected_modules': ['lark-doc'], 'forbidden_modules': []}]}))
 
             self.assertEqual(validator.validate(root), [])
             (module / 'SKILL.md').write_text((module / 'MODULE.md').read_text())
             self.assertIn('Nested modules must use MODULE.md, not SKILL.md', validator.validate(root))
+
+    def test_scenario_rejects_retired_skill_and_parent_mismatch(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / 'evals').mkdir()
+            (root / 'evals/scenarios.json').write_text(json.dumps({'cases': [{
+                'id': 'stale-route', 'prompt': '读取飞书文档',
+                'relevant_skills': ['lark-doc'], 'expected_modules': ['lark-doc']}]}))
+            errors = validator.validate_scenarios(root, {'lark'}, [
+                {'name': 'lark-doc', 'parent': 'lark'}])
+            self.assertIn('eval stale-route: lark-doc is not an installed skill', errors)
+            self.assertIn('eval stale-route: lark-doc requires parent lark', errors)
 
 
 if __name__ == '__main__':

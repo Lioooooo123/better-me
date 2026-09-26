@@ -20,6 +20,16 @@
 | 规则按需加载 | 延续短入口与直接引用；复杂规则才拆分，并补适用条件和示例 |
 | 安装可恢复 | 继续用已有安装预览、备份和恢复，不用通用 update 覆盖个人改写 |
 
-当前是私人源码库，暂不增加 npm 发布、公开发现索引、自动 release 或定时通知。若将来需要公开分发，再引入分发产物与独立兼容性验证。没有因为借鉴维护方式而安装 `find-skills` 或恢复已移除的总入口技能。
+审阅时还是私人源码库，因此未增加 npm 发布、公开发现索引、自动 release 或定时通知。当时也没有因为借鉴维护方式而安装 `find-skills` 或恢复已移除的总入口技能。
+
+仓库现已公开；上段是 2026-09-07 的原始取舍记录。公开可读不等于已经建立插件发布渠道，仍不自动增加 release 或发现索引。
 
 GitHub 树 API 使用匿名只读请求，受公共速率限制；失败会返回 `error` 和非零退出码。`path_missing` 表示本次完整目录树中找不到登记路径，不代表已确定该技能永久删除。上游状态仍是审阅基线，检查不会自动修改它。
+
+## 2026-09-26：广覆盖与按需加载
+
+[Anthropic Skills](https://github.com/anthropics/skills)在一个仓库展示多个领域，技能内部再按具体任务读取参考；[OpenAI Plugins](https://github.com/openai/plugins)以插件分组技能；[Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills)即使覆盖多个科学领域，也保留专用技能入口。这些是目录和分发方式的参考，不要求 better-me 复制它们的数量或流程。[Agent Skills 规范](https://agentskills.io/specification)将描述、入口正文与按需资源分层；[Codex 技能文档](https://developers.openai.com/codex/skills)说明描述决定隐式匹配，过多描述还可能在初始列表中被缩短或省略。
+
+better-me 继续用 19 个有独立触发条件的入口与 10 个模块，不增加“任何任务都触发”的总 skill。飞书的 `lark-shared` 是条件性参考，不是所有飞书模块的必读依赖。新增领域先判断现有入口能否按需路由；只有任务边界或交付物确实独立时再增加入口。
+
+维护验收同时看误触发和漏触发：`evals/scenarios.json` 指明应选入口、应读与不应读的模块；校验器检查引用仍在目录中。模型实际读取和任务结果需要另行在同一运行条件下记录，静态通过不能代替它。

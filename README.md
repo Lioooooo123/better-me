@@ -49,7 +49,7 @@ python3 -m venv .venv
 make check PYTHON=.venv/bin/python
 ```
 
-[默认清单](catalog/skills.json)与[模块清单](catalog/modules.json)记录入口、依赖和来源；[场景用例](evals/scenarios.json)记录行为验收标准。静态检查和脚本回归不等于模型实跑；未执行模型对照，不宣称速度、token 或任务成功率改善。
+[默认清单](catalog/skills.json)与[模块清单](catalog/modules.json)记录入口、依赖和来源；[场景用例](evals/scenarios.json)记录应触发的入口、应读与不应读的模块。校验器会检查场景仍指向有效入口；[路由验收说明](evals/README.md)记录实跑方法。静态检查和脚本回归不等于模型实跑；未执行模型对照，不宣称速度、token 或任务成功率改善。
 
 首次迁移时，原 42 个技能入口合计 503,356 字节，新 26 个合计 43,584 字节，减少 91.3%。这包含移除技能的贡献；是入口体积变化，不是上下文或性能测量。
 

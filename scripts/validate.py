@@ -10,6 +10,49 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def validate_scenarios(root, installed_names, modules):
+    path = root / 'evals/scenarios.json'
+    try:
+        cases = json.loads(path.read_text())['cases']
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        return [f'evals/scenarios.json: {error}']
+    if not isinstance(cases, list):
+        return ['evals/scenarios.json: cases must be a list']
+
+    errors = []
+    module_parents = {item['name']: item['parent'] for item in modules}
+    seen = set()
+    for case in cases:
+        if not isinstance(case, dict) or not isinstance(case.get('id'), str) or not case['id']:
+            errors.append('evals/scenarios.json: case needs a nonempty id')
+            continue
+        case_id = case['id']
+        if case_id in seen:
+            errors.append(f'eval {case_id}: duplicate id')
+        seen.add(case_id)
+        if not isinstance(case.get('prompt'), str) or not case['prompt'].strip():
+            errors.append(f'eval {case_id}: missing prompt')
+        relevant = case.get('relevant_skills')
+        expected = case.get('expected_modules', [])
+        forbidden = case.get('forbidden_modules', [])
+        if not all(isinstance(value, list) and all(isinstance(name, str) for name in value)
+                   for value in (relevant, expected, forbidden)):
+            errors.append(f'eval {case_id}: routing fields must be string lists')
+            continue
+        for name in relevant:
+            if name not in installed_names:
+                errors.append(f'eval {case_id}: {name} is not an installed skill')
+        for name in expected + forbidden:
+            if name not in module_parents:
+                errors.append(f'eval {case_id}: {name} is not a module')
+        for name in expected:
+            if name in module_parents and module_parents[name] not in relevant:
+                errors.append(f'eval {case_id}: {name} requires parent {module_parents[name]}')
+            if name in forbidden:
+                errors.append(f'eval {case_id}: {name} is both expected and forbidden')
+    return errors
+
+
 def validate(root=ROOT):
     errors = []
     installed = json.loads((root / 'catalog/skills.json').read_text())['skills']
@@ -95,10 +138,11 @@ def validate(root=ROOT):
             visit(child, stack + [node])
     for name in names:
         visit(name, [])
+    errors.extend(validate_scenarios(root, installed_names, modules))
     return errors
 
 
 if __name__ == '__main__':
     errors = validate()
-    print('\n'.join(errors) if errors else 'Validated catalog, metadata, references and required dependency graph.')
+    print('\n'.join(errors) if errors else 'Validated catalog, metadata, references, dependencies and routing scenarios.')
     sys.exit(bool(errors))

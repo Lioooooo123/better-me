@@ -66,9 +66,7 @@
       "name": "lark-calendar",
       "parent": "lark",
       "path": "skills/lark/modules/lark-calendar",
-      "requires": [
-        "lark-shared"
-      ],
+      "requires": [],
       "companions": [
         "lark-shared",
         "lark-task"
@@ -89,9 +87,7 @@
       "name": "lark-doc",
       "parent": "lark",
       "path": "skills/lark/modules/lark-doc",
-      "requires": [
-        "lark-shared"
-      ],
+      "requires": [],
       "companions": [
         "lark-drive",
         "lark-shared",
@@ -115,9 +111,7 @@
       "name": "lark-drive",
       "parent": "lark",
       "path": "skills/lark/modules/lark-drive",
-      "requires": [
-        "lark-shared"
-      ],
+      "requires": [],
       "companions": [
         "lark-doc",
         "lark-shared",
@@ -139,9 +133,7 @@
       "name": "lark-im",
       "parent": "lark",
       "path": "skills/lark/modules/lark-im",
-      "requires": [
-        "lark-shared"
-      ],
+      "requires": [],
       "companions": [
         "lark-doc",
         "lark-shared",
@@ -181,9 +173,7 @@
       "name": "lark-task",
       "parent": "lark",
       "path": "skills/lark/modules/lark-task",
-      "requires": [
-        "lark-shared"
-      ],
+      "requires": [],
       "companions": [
         "lark-calendar",
         "lark-shared",
@@ -205,9 +195,7 @@
       "name": "lark-wiki",
       "parent": "lark",
       "path": "skills/lark/modules/lark-wiki",
-      "requires": [
-        "lark-shared"
-      ],
+      "requires": [],
       "companions": [
         "lark-doc",
         "lark-drive",

@@ -27,6 +27,6 @@ make check PYTHON=.venv/bin/python
 make status
 ```
 
-本地和 CI 使用同一个 `make check`。它检查元数据、引用和依赖，并执行脚本回归。安装/恢复改动使用临时 home 验证；行为改动更新 `evals/scenarios.json` 的相关案例，实跑证据放 `evals/results/`，未实跑明确记录。
+本地和 CI 使用同一个 `make check`。它检查元数据、引用、依赖和场景中的入口/模块名称，并执行脚本回归。安装/恢复改动使用临时 home 验证；行为改动更新 `evals/scenarios.json` 的正反案例。按[路由验收说明](evals/README.md)在真实任务中检查实际选择和结果，证据放 `evals/results/`；未实跑保持 `not_run`，不能把静态检查写成模型通过。
 
 提交说明写清触发问题、行为变化及已执行验证。来源审阅记录放 `docs/`，临时下载在系统临时目录或 `.local/` 并在结束后清理。发布、推送和安装遵循会话已有授权；不要把它们混入只读检查命令。

@@ -69,8 +69,16 @@
       "id": "read-lark",
       "prompt": "找到飞书中的周报并总结",
       "relevant_skills": [
+        "lark"
+      ],
+      "expected_modules": [
         "lark-drive",
         "lark-doc"
+      ],
+      "forbidden_modules": [
+        "lark-im",
+        "lark-calendar",
+        "lark-task"
       ],
       "acceptance": [
         "不发送总结到群",
@@ -81,8 +89,11 @@
     },
     {
       "id": "authorized-send",
-      "prompt": "把这段已定稿内容发送到指定群一次",
+      "prompt": "把这段已定稿内容发送到指定飞书群一次",
       "relevant_skills": [
+        "lark"
+      ],
+      "expected_modules": [
         "lark-im"
       ],
       "acceptance": [
@@ -94,8 +105,11 @@
     },
     {
       "id": "calendar-overlap",
-      "prompt": "帮我找两个小时的可用时间",
+      "prompt": "在飞书日历里帮我找两个小时的可用时间",
       "relevant_skills": [
+        "lark"
+      ],
+      "expected_modules": [
         "lark-calendar"
       ],
       "acceptance": [
@@ -109,6 +123,9 @@
       "id": "uncommon-lark",
       "prompt": "读取我的飞书考勤记录",
       "relevant_skills": [
+        "lark"
+      ],
+      "expected_modules": [
         "lark-shared"
       ],
       "acceptance": [
@@ -210,6 +227,8 @@
       "id": "lark-doc-progressive",
       "prompt": "读取这篇飞书文档并概括正文",
       "relevant_skills": ["lark"],
+      "expected_modules": ["lark-doc"],
+      "forbidden_modules": ["lark-im", "lark-calendar", "lark-task", "lark-wiki", "lark-shared"],
       "acceptance": [
         "先读取 lark 入口和文档模块，不预读消息、日程、任务和 Wiki 模块",
         "只按读取任务再打开 fetch 等相关参考",
@@ -218,9 +237,23 @@
       "execution_status": "not_run"
     },
     {
+      "id": "lark-auth-on-demand",
+      "prompt": "读取这篇飞书文档时 CLI 返回 token 失效，请先排查认证再继续读取",
+      "relevant_skills": ["lark"],
+      "expected_modules": ["lark-doc", "lark-shared"],
+      "forbidden_modules": ["lark-im", "lark-calendar"],
+      "acceptance": [
+        "认证问题出现后才读取 shared 模块",
+        "先核对现有身份与错误，不盲目重登或重复创建文档"
+      ],
+      "execution_status": "not_run"
+    },
+    {
       "id": "ui-polish-progressive",
       "prompt": "精修这个页面的圆角和图标对齐",
       "relevant_skills": ["ui"],
+      "expected_modules": ["better-ui"],
+      "forbidden_modules": ["ios-hig-design"],
       "acceptance": [
         "只按当前问题读取 UI 细节模块的 surfaces 和 icons 参考",
         "不预读 iOS 设计与无关动效配方",
@@ -232,10 +265,55 @@
       "id": "react-audit-progressive",
       "prompt": "审查这个 React 页面频繁重渲染的问题",
       "relevant_skills": ["check"],
+      "expected_modules": ["improve-react"],
       "acceptance": [
         "按需读取 React 模块和性能类别参考，不预读其他四类与计划模板",
         "扫描结果须在代码和执行频率中核实",
         "未要求修复或计划时保持只读"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "lark-word-in-text",
+      "prompt": "把这段英文改写成发给客户的中文通知，保留事实但不要实际发送：Our team uses Lark for meetings. Starting Monday, the project lead will share notes after each session. This change does not alter meeting schedules.",
+      "relevant_skills": ["write"],
+      "forbidden_modules": ["lark-calendar", "lark-doc", "lark-im"],
+      "acceptance": [
+        "完成中文通知草稿，不因原文提到 Lark 而调用飞书服务",
+        "不读取飞书模块"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "ordinary-react-review",
+      "prompt": "审查这个 React PR 中表单提交与错误处理的回归",
+      "relevant_skills": ["check"],
+      "forbidden_modules": ["improve-react"],
+      "acceptance": [
+        "沿提交和错误路径审查普通代码问题",
+        "未要求 React 性能或可维护性专项时不预读 React 模块"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "ordinary-ui-implementation",
+      "prompt": "按现有设计系统新增一个设置页，接入已有真实数据",
+      "relevant_skills": ["ui"],
+      "forbidden_modules": ["better-ui", "ios-hig-design"],
+      "acceptance": [
+        "沿用现有组件和真实字段完成页面",
+        "没有精修或 iOS 原生问题时不预读专用模块"
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "local-document-no-lark",
+      "prompt": "概括我已经附上的本地 Markdown 文件",
+      "relevant_skills": [],
+      "forbidden_modules": ["lark-doc", "lark-drive"],
+      "acceptance": [
+        "直接处理已提供的本地文件",
+        "不因文档二字加载飞书或重新抓取材料"
       ],
       "execution_status": "not_run"
     }
